@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center py-6">
+    <nav className="flex justify-between items-center py-10">
       {/* Logo / Name */}
       <h1 className="text-3xl font-extrabold font-reddit-sans text-222222">
         danieldavid
