@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar";
+import Footer from '@/components/footer';
 import Image from 'next/image';
 import me from '@/assets/profile.jpg';
 import introsql from '@/assets/introsql.jpg';
@@ -425,18 +426,8 @@ export default function Home() {
 
         </div>
 
-        <div className="w-full bg-[#222222] py-5">
-
-          <div className="flex flex-col items-center justify-center">
-            <h1 className="text-white">hello</h1>
-          </div>
-
-          <div className="flex flex-col items-center justify-center">
-            <h1 className="text-white font-bold">© Daniel David Lupase 2025</h1>
-          </div>
-
-        </div>
+      {/* ✅ Footer */}
+          <Footer />
     </>
-    
   );
 }
