@@ -10,7 +10,7 @@ import TechStack from "@/components/techstack";
 import Image from 'next/image';
 
 // Profile & Project Images
-import me from '@/assets/profile.jpg';
+import me from '@/assets/me.png';
 import introsql from '@/assets/introsql.jpg';
 import sqlintermediate from '@/assets/sqlintermediate.jpg';
 
@@ -51,19 +51,25 @@ export default function Home() {
                 data-driven development, he aims to build efficient, scalable systems. 
               </p>
 
-              <button className="mt-6 sm:mt-8 bg-white text-[#222222] hover:bg-[#222222] hover:text-white border border-[#222222] px-4 sm:px-6 py-2 sm:py-3 rounded-md cursor-pointer transition-colors duration-300 text-sm sm:text-base">
-                Download Resume
-              </button>
+              <a href="/danieldavidresume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="mt-6 sm:mt-8 bg-white text-[#222222] hover:bg-[#222222] hover:text-white border border-[#222222] px-4 sm:px-6 py-2 sm:py-3 rounded-md cursor-pointer transition-colors duration-300 text-sm sm:text-base">
+                  Download Resume
+                </button>
+              </a>
             </div>
 
             {/* Hero Profile Image */}
             <div className="w-full lg:w-[40%] flex justify-center items-center cursor-pointer">
-              <div className="relative w-64 sm:w-80 lg:w-96 aspect-square">
+              <div className="relative w-64 sm:w-80 lg:w-96 aspect-square group">
                 <Image
                   src={me}
                   alt="me"
+                  quality={100}
                   fill
-                  className="object-cover rounded-lg"
+                  className="object-cover rounded-full transition-transform duration-500 group-hover:scale-105 group-hover:shadow-lg"
                   sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 384px"
                 />
               </div>
@@ -81,9 +87,12 @@ export default function Home() {
             <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-center sm:text-left">
               MY SERVICES
             </h2>
+            <Link
+            href="/services">
             <button className="text-white text-xs sm:text-sm bg-transparent border border-white px-3 py-2 rounded-md hover:bg-white hover:text-black cursor-pointer transition-colors duration-300">
               More Services
             </button>
+            </Link>
           </div>
 
           {/* Services Grid */}
@@ -159,9 +168,12 @@ export default function Home() {
             <h2 className="text-[#222222] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-center sm:text-left">
               MY FEATURED PROJECTS
             </h2>
+            <Link
+            href="/projects">
             <button className="bg-white text-[#222222] hover:bg-[#222222] hover:text-white border border-[#222222] px-4 py-2 rounded-md cursor-pointer transition-colors duration-300 text-sm sm:text-base">
               More Projects
             </button>
+            </Link>
           </div>
           
           <p className="text-sm sm:text-base mt-4 text-center sm:text-left text-[#222222]">
