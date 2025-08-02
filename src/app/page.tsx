@@ -317,7 +317,7 @@ export default function Home() {
               MY CERTIFICATIONS
             </h1>
             <p className="text-sm sm:text-base leading-relaxed">
-              A collection of certifications I've earned to support my learning and development in tech.
+              A collection of certifications I&apos;ve earned to support my learning and development in tech.
             </p>
             <Link href="/certifications">
             <button className="mt-6 sm:mt-10 text-white text-xs sm:text-sm bg-transparent border border-white px-3 py-2 rounded-md hover:bg-white hover:text-black cursor-pointer transition-colors duration-300">

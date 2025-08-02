@@ -24,7 +24,7 @@ export default function Services() {
             </h1>
             <p className="max-w-3xl mx-auto text-sm sm:text-base lg:text-lg text-[#222222] leading-relaxed px-4">
               I offer comprehensive database development and software solutions tailored to meet your business needs. 
-              From database design to full-stack development, I'm committed to delivering high-quality, scalable solutions.
+              From database design to full-stack development, I&apos;m committed to delivering high-quality, scalable solutions.
             </p>
           </div>
         </main>
@@ -235,7 +235,7 @@ export default function Services() {
               </div>
               <h3 className="text-xl font-semibold mb-4">Delivery</h3>
               <p className="text-white/80 text-sm leading-relaxed">
-                Testing, deployment, and ongoing support to ensure your project's continued success.
+                Testing, deployment, and ongoing support to ensure your project&apos;s continued success.
               </p>
             </div>
 
@@ -250,8 +250,8 @@ export default function Services() {
             READY TO START YOUR PROJECT?
           </h2>
           <p className="text-sm sm:text-base text-[#222222]/80 font-light max-w-3xl mx-auto mb-8 leading-relaxed">
-            Let's discuss how I can help bring your database and software development projects to life. 
-            I'm committed to delivering high-quality solutions that meet your specific needs and exceed your expectations.
+            Let&apos;s discuss how I can help bring your database and software development projects to life. 
+            I&apos;m committed to delivering high-quality solutions that meet your specific needs and exceed your expectations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="text-[#222222] border border-[#222222] hover:bg-[#222222] hover:text-white px-8 py-3 rounded-md cursor-pointer transition-colors duration-300 text-sm sm:text-base font-medium">

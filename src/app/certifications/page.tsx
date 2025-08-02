@@ -22,8 +22,8 @@ export default function Certifications() {
               MY CERTIFICATIONS
             </h1>
             <p className="max-w-3xl mx-auto text-sm sm:text-base lg:text-lg text-[#222222] leading-relaxed px-4">
-              I'm continuously pursuing various certifications to enhance my skills and stay current with 
-              industry standards. Here's a collection of certifications I've earned and am working towards.
+              I&apos;m continuously pursuing various certifications to enhance my skills and stay current with 
+              industry standards. Here&apos;s a collection of certifications I&apos;ve earned and am working towards.
             </p>
           </div>
         </main>

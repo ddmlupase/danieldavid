@@ -17,7 +17,7 @@ export default function Footer() {
             <div>
               <h2 className="text-3xl font-bold font-reddit-sans mb-4">danieldavid</h2>
               <p className="text-gray-300 leading-relaxed max-w-md font-reddit-sans">
-                Looking to collaborate or hire me for a project? Let's connect and build something amazing together.
+                Looking to collaborate or hire me for a project? Let&apos;s connect and build something amazing together.
               </p>
             </div>
 
