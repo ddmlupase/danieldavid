@@ -254,11 +254,8 @@ export default function Services() {
             I'm committed to delivering high-quality solutions that meet your specific needs and exceed your expectations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="bg-[#222222] text-white hover:bg-[#222222]/90 px-8 py-3 rounded-md cursor-pointer transition-colors duration-300 text-sm sm:text-base font-medium">
-              Get Quote
-            </button>
             <button className="text-[#222222] border border-[#222222] hover:bg-[#222222] hover:text-white px-8 py-3 rounded-md cursor-pointer transition-colors duration-300 text-sm sm:text-base font-medium">
-              View Portfolio
+              Download Resume
             </button>
           </div>
         </div>

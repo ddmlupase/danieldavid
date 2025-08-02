@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar";
 import Footer from '@/components/footer';
 import Image from 'next/image';
+import project1 from '@/assets/project1.png';
 
 // Import your project images (add these to your assets folder)
 // import project1 from '@/assets/project1.jpg';
@@ -50,9 +51,7 @@ export default function Projects() {
             <div className="transform transition-transform duration-300 hover:scale-105 bg-white/5 rounded-lg overflow-hidden">
               <div className="bg-[#333333] h-64 sm:h-72 flex items-center justify-center">
                 <div className="text-center text-white">
-                  <div className="text-4xl mb-4">🗄️</div>
-                  <p className="text-lg">Student Information System</p>
-                  <p className="text-sm opacity-80">Database Project</p>
+                  <div className="text-4xl mb-4">Coming Soon...</div>
                 </div>
               </div>
               <div className="p-6">
@@ -88,9 +87,14 @@ export default function Projects() {
             <div className="transform transition-transform duration-300 hover:scale-105 bg-white/5 rounded-lg overflow-hidden">
               <div className="bg-[#333333] h-64 sm:h-72 flex items-center justify-center">
                 <div className="text-center text-white">
-                  <div className="text-4xl mb-4">💻</div>
-                  <p className="text-lg">Portfolio Website</p>
-                  <p className="text-sm opacity-80">Web Development</p>
+                  <div className="text-4xl mb-4">
+                    <Image
+                    src={project1}
+                    alt="project1"
+                    className="sm:w-[100%]"
+                    />
+                  </div>
+                  
                 </div>
               </div>
               <div className="p-6">
@@ -162,8 +166,8 @@ export default function Projects() {
           <div className="transform transition-transform duration-300 hover:scale-105 border border-gray-200 rounded-lg overflow-hidden">
             <div className="bg-[#222222] h-48 flex items-center justify-center">
               <div className="text-center text-white">
-                <div className="text-3xl mb-2">🗄️</div>
-                <p className="text-sm">Database Project</p>
+                <div className="text-3xl mb-2 font-reddit-sans">Coming Soon...</div>
+                
               </div>
             </div>
             <div className="p-6">
@@ -191,8 +195,7 @@ export default function Projects() {
           <div className="transform transition-transform duration-300 hover:scale-105 border border-gray-200 rounded-lg overflow-hidden">
             <div className="bg-[#222222] h-48 flex items-center justify-center">
               <div className="text-center text-white">
-                <div className="text-3xl mb-2">📚</div>
-                <p className="text-sm">Web Application</p>
+                <div className="text-3xl mb-2">Coming Soon...</div>
               </div>
             </div>
             <div className="p-6">
@@ -220,8 +223,7 @@ export default function Projects() {
           <div className="transform transition-transform duration-300 hover:scale-105 border border-gray-200 rounded-lg overflow-hidden">
             <div className="bg-[#222222] h-48 flex items-center justify-center">
               <div className="text-center text-white">
-                <div className="text-3xl mb-2">📦</div>
-                <p className="text-sm">Windows Application</p>
+                <div className="text-3xl mb-2">Coming Soon...</div>
               </div>
             </div>
             <div className="p-6">
@@ -250,8 +252,7 @@ export default function Projects() {
           <div className="transform transition-transform duration-300 hover:scale-105 border border-gray-200 rounded-lg overflow-hidden">
             <div className="bg-[#222222] h-48 flex items-center justify-center">
               <div className="text-center text-white">
-                <div className="text-3xl mb-2">🛒</div>
-                <p className="text-sm">Database Design</p>
+                <div className="text-3xl mb-2">Coming Soon...</div>
               </div>
             </div>
             <div className="p-6">

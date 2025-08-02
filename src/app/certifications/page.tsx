@@ -130,7 +130,6 @@ export default function Certifications() {
           <div className="transform transition-transform duration-300 hover:scale-105 flex flex-col items-center border-2 border-[#222222] p-6 rounded-lg">
             <div className="bg-[#222222] w-full max-w-[280px] h-40 sm:h-44 lg:h-48 text-white flex items-center justify-center mb-4 rounded-md">
               <div className="text-center">
-                <div className="text-4xl mb-2">📚</div>
                 <p className="text-sm">In Progress</p>
               </div>
             </div>
@@ -157,7 +156,6 @@ export default function Certifications() {
           <div className="transform transition-transform duration-300 hover:scale-105 flex flex-col items-center border-2 border-[#222222] p-6 rounded-lg">
             <div className="bg-[#222222] w-full max-w-[280px] h-40 sm:h-44 lg:h-48 text-white flex items-center justify-center mb-4 rounded-md">
               <div className="text-center">
-                <div className="text-4xl mb-2">🎯</div>
                 <p className="text-sm">Planning</p>
               </div>
             </div>
@@ -184,7 +182,6 @@ export default function Certifications() {
           <div className="transform transition-transform duration-300 hover:scale-105 flex flex-col items-center border-2 border-[#222222] p-6 rounded-lg">
             <div className="bg-[#222222] w-full max-w-[280px] h-40 sm:h-44 lg:h-48 text-white flex items-center justify-center mb-4 rounded-md">
               <div className="text-center">
-                <div className="text-4xl mb-2">🔮</div>
                 <p className="text-sm">Future Goal</p>
               </div>
             </div>
