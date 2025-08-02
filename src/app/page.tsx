@@ -1,433 +1,372 @@
+// ===== IMPORTS =====
+// Components
 import Navbar from "@/components/navbar";
 import Footer from '@/components/footer';
+import Status from "@/components/status";
+import TypeName from "@/components/TypeName";
+import TechStack from "@/components/techstack";
+
+// Next.js
 import Image from 'next/image';
+
+// Profile & Project Images
 import me from '@/assets/profile.jpg';
 import introsql from '@/assets/introsql.jpg';
 import sqlintermediate from '@/assets/sqlintermediate.jpg';
+
+// Service Icons
 import database from '@/assets/database.png';
 import domain from '@/assets/domain.png';
 import window from '@/assets/window.png';
-import mysql from '@/assets/mysql.png';
-import js from '@/assets/js.png';
-import html from '@/assets/html.png';
-import css from '@/assets/css.png';
-import ts from '@/assets/ts.png';
-import nextjs from '@/assets/nextjs.png';
-import visualstudio from '@/assets/visualstudio.png';
-import github from '@/assets/github.png';
-import vscode from '@/assets/vscode.png';
-import drawio from '@/assets/drawio.png';
-import nodejs from '@/assets/nodejs.png';
-import prisma from '@/assets/prisma.png';
+
+//link
+import Link from "next/link";
 
 
 export default function Home() {
   return (
     <>
-      {/* Container that limits width */}
-      <div className="max-w-6xl mx-auto">
+      {/* ===== HERO SECTION ===== */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Navbar />
-        <main className="min-h-[700px] flex items-center justify-left">
-          <div className="flex flex-col md:flex-row items-center justify-between w-full gap-10">
+        
+        <main className="min-h-[600px] sm:min-h-[700px] flex items-center justify-center" id="home">
+          <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-8 lg:gap-12">
             
-            <div className="md:w-[60%]">
-              <h1 className="text-1xl font-light font-reddit-sans mt-20">
+            {/* Hero Text Content */}
+            <div className="w-full lg:w-[60%] text-center lg:text-left">
+              <h1 className="text-lg sm:text-xl font-light font-reddit-sans mt-10 sm:mt-20">
                 Hi there, I am
               </h1>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[85px] font-bold font-reddit-sans text-222222 leading-tight">
-                DANIEL DAVID
+              <TypeName />
+
+              <h1 className="text-xl sm:text-2xl lg:text-2xl font-semibold font-reddit-sans text-[#222222] leading-tight mt-2">
+                JUNIOR DATABASE DEVELOPER
               </h1>
 
-              <h1 className="text-2xl font-semibold font-reddit-sans text-222222 leading-tight">
-                DATABASE DEVELOPER
-              </h1>
-
-              <p className="max-w-xl text-base font-light font-reddit-sans text-222222 leading-relaxed mt-7">
+              <p className="max-w-none lg:max-w-xl text-sm sm:text-base font-light font-reddit-sans text-[#222222] leading-relaxed mt-4 sm:mt-7 px-4 lg:px-0">
                 Daniel David is a dedicated database-focused student passionate about organizing, 
                 managing, and securing data. With a growing foundation in SQL, database design, and 
                 data-driven development, he aims to build efficient, scalable systems. 
               </p>
 
-              <button className="mt-8 bg-white text-[#222222] hover:bg-[#222222] hover:text-white border border-[#222222] px-4 py-1 rounded-md cursor-pointer">
+              <button className="mt-6 sm:mt-8 bg-white text-[#222222] hover:bg-[#222222] hover:text-white border border-[#222222] px-4 sm:px-6 py-2 sm:py-3 rounded-md cursor-pointer transition-colors duration-300 text-sm sm:text-base">
                 Download Resume
               </button>
             </div>
 
-            <div className="md:w-[40%] flex justify-center items-center cursor-pointer">
-              <Image
-                src={me}
-                alt="me"
-                width={500}
-              />
+            {/* Hero Profile Image */}
+            <div className="w-full lg:w-[40%] flex justify-center items-center cursor-pointer">
+              <div className="relative w-64 sm:w-80 lg:w-96 aspect-square">
+                <Image
+                  src={me}
+                  alt="me"
+                  fill
+                  className="object-cover rounded-lg"
+                  sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 384px"
+                />
+              </div>
             </div>
           </div>
         </main>
       </div>
 
-      {/* ✅ Full-width dark section */}
-      <div className="w-full bg-[#222222] py-24">
-
-        <div className="max-w-6xl mx-auto">
+      {/* ===== SERVICES SECTION ===== */}
+      <div className="w-full bg-[#222222] py-16 sm:py-20 lg:py-24" id="services">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="flex justify-between items-center w-full">
-            <h2 className="text-white text-5xl font-bold">MY SERVICES</h2>
-            <button className="text-white text-sm bg-transparent border border-white px-3 py-2 rounded-md hover:bg-white hover:text-black cursor-pointer">
-            More Services
+          {/* Services Header */}
+          <div className="flex flex-col sm:flex-row justify-between items-center w-full gap-4 sm:gap-0">
+            <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-center sm:text-left">
+              MY SERVICES
+            </h2>
+            <button className="text-white text-xs sm:text-sm bg-transparent border border-white px-3 py-2 rounded-md hover:bg-white hover:text-black cursor-pointer transition-colors duration-300">
+              More Services
             </button>
-            </div>
+          </div>
 
-          <div className="flex font-reddit-sans justify-between gap-50 mt-15 md:w-[100%]">
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-12 mt-12 sm:mt-16 font-reddit-sans">
 
-            <div className="md:w-[33%]">
-              <Image
-                src={database}
-                alt="database"
-                width={50}
-              />
-              <h3 className="text-white text-2xl font-medium mt-8">RELATIONAL DATABASE DESIGN SERVICE</h3>
-              <p className="text-white text-base font-thin mt-9">
+            {/* Service 1: Database Design */}
+            <div className="text-center md:text-left">
+              <div className="flex justify-center md:justify-start">
+                <Image
+                  src={database}
+                  alt="database"
+                  width={40}
+                  height={40}
+                  className="sm:w-12 sm:h-12"
+                />
+              </div>
+              <h3 className="text-white text-lg sm:text-xl lg:text-2xl font-medium mt-6 sm:mt-8 leading-tight">
+                RELATIONAL DATABASE DESIGN SERVICE
+              </h3>
+              <p className="text-white text-sm sm:text-base font-thin mt-4 sm:mt-6 lg:mt-9 leading-relaxed">
                 Designing ER diagrams and building structured database schemas using MySQL Workbench.
               </p>
             </div>
 
-            <div className="md:w-[33%]">
-              <Image
-                src={domain}
-                alt="domain"
-                width={50}
-              />
-              <h3 className="text-white text-2xl font-medium mt-8">WEBSITE DEVELOPMENT</h3>
-              <p className="text-white text-base font-thin mt-17">
+            {/* Service 2: Website Development */}
+            <div className="text-center md:text-left">
+              <div className="flex justify-center md:justify-start">
+                <Image
+                  src={domain}
+                  alt="domain"
+                  width={40}
+                  height={40}
+                  className="sm:w-12 sm:h-12"
+                />
+              </div>
+              <h3 className="text-white text-lg sm:text-xl lg:text-2xl font-medium mt-6 sm:mt-8 leading-tight">
+                WEBSITE DEVELOPMENT
+              </h3>
+              <p className="text-white text-sm sm:text-base font-thin mt-4 sm:mt-6 lg:mt-17 leading-relaxed">
                 Developing responsive websites with both frontend and backend functionality.
               </p>
             </div>
 
-            <div className="md:w-[33%]">
-              <Image
-                src={window}
-                alt="window"
-                width={50}
-              />
-              <h3 className="text-white text-2xl font-medium mt-8">WINDOWS SOFTWARE DEVELOPMENT</h3>
-              <p className="text-white text-base font-thin mt-8">
+            {/* Service 3: Windows Software */}
+            <div className="text-center md:text-left md:col-span-2 xl:col-span-1">
+              <div className="flex justify-center md:justify-start">
+                <Image
+                  src={window}
+                  alt="window"
+                  width={40}
+                  height={40}
+                  className="sm:w-12 sm:h-12"
+                />
+              </div>
+              <h3 className="text-white text-lg sm:text-xl lg:text-2xl font-medium mt-6 sm:mt-8 leading-tight">
+                WINDOWS SOFTWARE DEVELOPMENT
+              </h3>
+              <p className="text-white text-sm sm:text-base font-thin mt-4 sm:mt-6 lg:mt-8 leading-relaxed">
                 Creating custom Windows applications using C# and Visual Studio.
               </p>
             </div>
 
           </div>
-
         </div>
-
       </div>
 
-      {/* ✅ Projects section */}
-      <div className="max-w-6xl mx-auto">
-
+      {/* ===== PROJECTS SECTION ===== */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col">
 
-          <div className="flex justify-between items-center w-full mt-40">
-            <h2 className="text-[#222222] text-5xl font-bold">MY FEATURED PROJECTS</h2>
-            <button className="mt-8 bg-white text-[#222222] hover:bg-[#222222] hover:text-white border border-[#222222] px-4 py-1 rounded-md cursor-pointer">
-            More Projects
+          {/* Projects Header */}
+          <div className="flex flex-col sm:flex-row justify-between items-center w-full mt-20 sm:mt-32 lg:mt-40 gap-4 sm:gap-0" id="projects">
+            <h2 className="text-[#222222] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-center sm:text-left">
+              MY FEATURED PROJECTS
+            </h2>
+            <button className="bg-white text-[#222222] hover:bg-[#222222] hover:text-white border border-[#222222] px-4 py-2 rounded-md cursor-pointer transition-colors duration-300 text-sm sm:text-base">
+              More Projects
             </button>
           </div>
-          <p>These featured projects highlight my experience in web development, database design, and application building.</p>
-
           
-          <div className="flex flex-col md:flex-row gap-5 mt-14">
+          <p className="text-sm sm:text-base mt-4 text-center sm:text-left text-[#222222]">
+            These featured projects highlight my experience in web development, database design, and application building.
+          </p>
 
-            <div className="md:w-[33%]">
+          {/* Projects Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 mt-10 sm:mt-14">
 
-              <div className="bg-[#222222] md:w-[100%] h-[200px] flex justify-center items-center rounded-md">
-                <p className="text-white">Project 1 Image</p>
+            {/* Project 1 */}
+            <div className="transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <div className="bg-[#222222] w-full h-48 sm:h-52 lg:h-56 flex justify-center items-center rounded-md">
+                <p className="text-white text-sm sm:text-base">Coming Soon...</p>
               </div>
 
-              <p className="text-[#222222] text-1xl font-thin mt-2 font-reddit-sans">Entity Relationship Diagram</p>
+              <p className="text-[#222222] text-sm sm:text-base font-thin mt-3 font-reddit-sans">
+                Entity Relationship Diagram Design
+              </p>
+              <h1 className="text-[#222222] text-base sm:text-lg font-bold font-reddit-sans mt-1">
+                Inventory Management System
+              </h1>
 
-              <h1 className="text-[#222222] text-lg font-bold font-reddit-sans mt-1">Student Information System</h1>
-
-              <div className="flex gap-2 mt-2">
-                <p className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-sm text-align-center">
-                  MySQL</p>
-                <p className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-sm text-align-center">
-                  WorkBench</p>
+              <div className="flex flex-wrap gap-2 mt-3">
+                <span className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-xs sm:text-sm">
+                  MySQL
+                </span>
+                <span className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-xs sm:text-sm">
+                  WorkBench
+                </span>
               </div>
-
             </div>
 
-            <div className="md:w-[33%]">
-
-              <div className="bg-[#222222] md:w-[100%]  h-[200px] flex justify-center items-center rounded-md">
-                <p className="text-white">Project 2 Image</p>
+            {/* Project 2 */}
+            <div className="transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <div className="bg-[#222222] w-full h-48 sm:h-52 lg:h-56 flex justify-center items-center rounded-md">
+                <p className="text-white text-sm sm:text-base">Coming Soon...</p>
               </div>
 
-              <p className="text-[#222222] text-1xl font-thin mt-2 font-reddit-sans">Entity Relationship Diagram</p>
+              <p className="text-[#222222] text-sm sm:text-base font-thin mt-3 font-reddit-sans">
+                SQL integration with frontend, real-time updates, transactions
+              </p>
+              <h1 className="text-[#222222] text-base sm:text-lg font-bold font-reddit-sans mt-1">
+                Task Management Web App
+              </h1>
 
-              <h1 className="text-[#222222] text-lg font-bold font-reddit-sans mt-1">Student Information System</h1>
-
-              <div className="flex gap-2 mt-2">
-                <p className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-sm text-align-center">
-                  MySQL</p>
-                <p className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-sm text-align-center">
-                  JavaScript</p>
-                <p className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-sm text-align-center">
-                  HTML</p>
-                <p className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-sm text-align-center">
+              <div className="flex flex-wrap gap-2 mt-3">
+                <span className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-xs sm:text-sm">
+                  MySQL
+                </span>
+                <span className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-xs sm:text-sm">
+                  JavaScript
+                </span>
+                <span className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-xs sm:text-sm">
+                  HTML
+                </span>
+                <span className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-xs sm:text-sm">
                   CSS
-                </p>
+                </span>
               </div>
-
             </div>
 
-            <div className="md:w-[33%]">
-
-              <div className="bg-[#222222] md:w-[100%] h-[200px] flex justify-center items-center rounded-md">
-                <p className="text-white">Coming Soon...</p>
+            {/* Project 3 */}
+            <div className="transform transition-transform duration-300 hover:scale-105 cursor-pointer md:col-span-2 xl:col-span-1">
+              <div className="bg-[#222222] w-full h-48 sm:h-52 lg:h-56 flex justify-center items-center rounded-md">
+                <p className="text-white text-sm sm:text-base">Coming Soon...</p>
               </div>
               
-              <p className="text-[#222222] text-1xl font-thin mt-2 font-reddit-sans">Entity Relationship Diagram</p>
+              <p className="text-[#222222] text-sm sm:text-base font-thin mt-3 font-reddit-sans">
+                Complex joins, reports, data integrity
+              </p>
+              <h1 className="text-[#222222] text-base sm:text-lg font-bold font-reddit-sans mt-1">
+                Student Information System
+              </h1>
 
-              <h1 className="text-[#222222] text-lg font-bold font-reddit-sans mt-1">Student Information System</h1>
+              <div className="flex flex-wrap gap-2 mt-3">
+                <span className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-xs sm:text-sm">
+                  MySQL
+                </span>
+              </div>
+            </div>
 
-              <div className="flex gap-2 mt-2">
-                <p className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-sm text-align-center">
-                  MySQL</p>
-                <p className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-sm text-align-center">
-                  JavaScript</p>
-                <p className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-sm text-align-center">
-                  Next.js
-                </p>
+            {/* Project 4 */}
+            <div className="transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <div className="bg-[#222222] w-full h-48 sm:h-52 lg:h-56 flex justify-center items-center rounded-md">
+                <p className="text-white text-sm sm:text-base">Coming Soon...</p>
               </div>
 
+              <p className="text-[#222222] text-sm sm:text-base font-thin mt-3 font-reddit-sans">
+                Entity Relationship Diagram Design
+              </p>
+              <h1 className="text-[#222222] text-base sm:text-lg font-bold font-reddit-sans mt-1">
+                Library Management System
+              </h1>
+              
+              <div className="flex flex-wrap gap-2 mt-3">
+                <span className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-xs sm:text-sm">
+                  MySQL
+                </span>
+                <span className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-xs sm:text-sm">
+                  WorkBench
+                </span>
+              </div>
             </div>
+
+            {/* Project 5 */}
+            <div className="transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <div className="bg-[#222222] w-full h-48 sm:h-52 lg:h-56 flex justify-center items-center rounded-md">
+                <p className="text-white text-sm sm:text-base">Coming Soon...</p>
+              </div>
+
+              <p className="text-[#222222] text-sm sm:text-base font-thin mt-3 font-reddit-sans">
+                Many-to-many relationships, stored procedures, indexing
+              </p>
+              <h1 className="text-[#222222] text-base sm:text-lg font-bold font-reddit-sans mt-1">
+                E-commerce Product & Order DB
+              </h1>
+
+              <div className="flex flex-wrap gap-2 mt-3">
+                <span className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-xs sm:text-sm">
+                  MySQL
+                </span>
+              </div>
+            </div>
+
           </div>
-
-          <div className="flex flex-col md:flex-row gap-5 mt-10">
-
-            <div className="md:w-[33%]">
-
-              <div className="bg-[#222222] md:w-[100%] h-[200px] flex justify-center items-center rounded-md">
-                <p className="text-white">Coming Soon...</p>
-              </div>
-
-              <p className="text-[#222222] text-1xl font-thin mt-2 font-reddit-sans">Entity Relationship Diagram</p>
-
-              <h1 className="text-[#222222] text-lg font-bold font-reddit-sans mt-1">Student Information System</h1>
-              
-              <div className="flex gap-2 mt-2">
-                <p className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-sm text-align-center">
-                  MySQL</p>
-                <p className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-sm text-align-center">
-                  Next.js
-                </p>
-              </div>
-
-            </div>
-
-            <div className="md:w-[33%]">
-
-              <div className="bg-[#222222] md:w-[100%]  h-[200px] flex justify-center items-center rounded-md">
-                <p className="text-white">Coming Soon...</p>
-              </div>
-
-              <p className="text-[#222222] text-1xl font-thin mt-2 font-reddit-sans ">Entity Relationship Diagram</p>
-
-              <h1 className="text-[#222222] text-lg font-bold font-reddit-sans mt-1">Student Information System</h1>
-
-              <div className="flex gap-2 mt-2">
-                <p className="bg-[#D9D9D9] text-[#222222] px-2 py-1 rounded-full font-reddit-sans text-sm text-align-center">
-                  MySQL</p>
-              </div>
-
-            </div>
-
-            <div className="md:w-[33%]">
-            </div>
-            </div>
-
 
         </div>
       </div>
-      {/* ✅ status */}
-      <div className="max-w-6xl mx-auto">
 
-        <div className="flex flex-col items-center justify-center mt-50 mb-50">
-        <h1 className="text-6xl font-bold font-reddit-sans text-[#222222]">
-          DANIEL DAVID SO FAR HAS
-        </h1>
-        
-        <ul className="flex text-[#222222] font-reddit-sans mt-5 gap-8 max-w-1xl">
-          <li className="flex items-center">
-            <h1 className="font-bold text-8xl">01</h1>
-            <p className="text-lg">Clients.</p>
-          </li>
+      {/* ===== STATUS COMPONENT ===== */}
+      <Status />
 
-          <li className="flex items-center">
-            <h1 className="font-bold text-8xl mr-2">03</h1>
-            <p className="text-lg">Years of Experience.</p>
-          </li>
+      {/* ===== CERTIFICATIONS SECTION ===== */}
+      <div className="w-full bg-[#222222] py-16 sm:py-20 lg:py-24" id="certifications">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-8 lg:gap-12">
 
-          <li className="flex items-center">
-            <h1 className="font-bold text-8xl mr-2">02</h1>
-            <p className="text-lg">Obtained Certifications.</p>
-          </li>
-
-          <li className="flex items-center">
-            <h1 className="font-bold text-8xl mr-2">04</h1>
-            <p className="text-lg">Projects Made.</p>
-          </li>
-        </ul>
-
-        </div>
-        </div>
-
-        {/** Certifications Section */}
-        <div className="w-full bg-[#222222] py-24">
-
-
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10">
-
-            <div className="text-white md:w-[32%]">
-              <h3>Check Out</h3>
-              <h1 className="text-4xl font-bold mb-7 mt-1">MY CERTIFICATIONS</h1>
-              <p className="">A collection of certifications I’ve earned to support my learning and development in tech.</p>
-              <button className="mt-10 text-white text-sm bg-transparent border border-white px-3 py-2 rounded-md hover:bg-white hover:text-black cursor-pointer">
-              More Certifications
-              </button>
-
-            </div>
-
-            <div className="text-white md:w-[66%]">
-
-              <ul className="flex flex-col md:flex-row justify-between font-reddit-sans">
-
-                <li>
-                  <div className="relative bg-white md:w-[245px] h-[150px] overflow-hidden mb-2">
-                    <Image
-                      src={sqlintermediate}
-                      alt="me"
-                      fill
-                      className="object-cover" // or use object-contain
-                    />
-                  </div>
-  
-                  <p className="text-center font-semibold">Intermediate SQL</p>
-                  <p className="text-center font-thin">Sololearn</p>
-                </li>
-
-                <li>
-                  <div className="bg-white md:w-[245px] h-[150px] text-black flex items-center justify-center mb-2">
-                    Coming Soon!
-                  </div>
-                  <p className="text-center font-semibold">Introduction to Networks</p>
-                  <p className="text-center font-thin">Cisco</p>
-                </li>
-
-                <li>
-                  <div className="relative bg-white md:w-[245px] h-[150px] overflow-hidden mb-2">
-                    <Image
-                      src={introsql}
-                      alt="me"
-                      fill
-                      className="object-cover" // or use object-contain
-                    />
-                  </div>
-                  <p className="text-center font-semibold">Introduction to SQL</p>
-                  <p className="text-center font-thin">Sololearn</p>
-                </li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-
-        {/* ✅ tech stack */}
-        <div className="max-w-6xl mx-auto">
-
-          <div className="flex flex-col items-center justify-center mt-40 mb-15">
-
-            <h1 className="text-6xl font-bold font-reddit-sans text-[#222222] mb-3">
-              MY TECH STACK
+          {/* Certifications Text Content */}
+          <div className="text-white w-full lg:w-[35%] text-center lg:text-left">
+            <h3 className="text-sm sm:text-base">Check Out</h3>
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-7 mt-1">
+              MY CERTIFICATIONS
             </h1>
-            <p className="text-lg font-reddit-sans text-[#222222]">Here are the tools and technologies I use in my recent projects</p>
-
+            <p className="text-sm sm:text-base leading-relaxed">
+              A collection of certifications I've earned to support my learning and development in tech.
+            </p>
+            <Link href="/certifications">
+            <button className="mt-6 sm:mt-10 text-white text-xs sm:text-sm bg-transparent border border-white px-3 py-2 rounded-md hover:bg-white hover:text-black cursor-pointer transition-colors duration-300">
+              More Certifications
+            </button>
+            </Link>
           </div>
 
-          <div className="mb-50">
+          {/* Certifications Grid */}
+          <div className="text-white w-full lg:w-[65%]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 font-reddit-sans">
 
-            <ul className="flex gap-25 text-222222 font-thin text-sm sm:text-base font-reddit-sans justify-center mb-25">
-            <li className="flex justify-center items-center"><Image
-                src={mysql}
-                alt="mysql"
-                width={100}
-              /></li>
-            <li className="flex justify-center items-center"><Image
-                src={js}
-                alt="js"
-                width={100}
-              /></li>
-            <li className="flex justify-center items-center"><Image
-                src={css}
-                alt="css"
-                width={100}
-              /></li>
-            <li className="flex justify-center items-center"><Image
-                src={html}
-                alt="html"
-                width={100}
-              /></li>
-            <li className="flex justify-center items-center"><Image
-                src={ts}
-                alt="ts"
-                width={100}
-              /></li>
-              <li className="flex justify-center items-center"><Image
-                src={vscode}
-                alt="vscode"
-                width={100}
-              /></li>
-            </ul>
+              {/* Certification 1: Intermediate SQL */}
+              <div className="transform transition-transform duration-300 hover:scale-110 flex flex-col items-center">
+                <div className="relative bg-white w-full max-w-[245px] h-32 sm:h-36 lg:h-40 overflow-hidden mb-3">
+                  <Image
+                    src={sqlintermediate}
+                    alt="Intermediate SQL Certificate"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 245px"
+                  />
+                </div>
+                <p className="text-center font-semibold text-sm sm:text-base">Intermediate SQL</p>
+                <p className="text-center font-thin text-xs sm:text-sm">Sololearn</p>
+              </div>
 
-            <ul className="flex gap-25 text-222222 font-thin text-sm sm:text-base font-reddit-sans justify-center mb-20">
-            <li className="flex justify-center items-center"><Image
-                src={nextjs}
-                alt="nextjs"
-                width={100}
-              /></li>
-            <li className="flex justify-center items-center"><Image
-                src={drawio}
-                alt="drawio"
-                width={100}
-              /></li>
-            <li className="flex justify-center items-center"><Image
-                src={github}
-                alt="github"
-                width={100}
-              /></li>
-            <li className="flex justify-center items-center"><Image
-                src={visualstudio}
-                alt="visualstudio"
-                width={100}
-              /></li>
-            <li className="flex justify-center items-center"><Image
-                src={nodejs}
-                alt="nodejs"
-                width={100}
-              /></li>
-              <li className="flex justify-center items-center"><Image
-                src={prisma}
-                alt="prisma"
-                width={100}
-              /></li>
-            </ul>
+              {/* Certification 2: Introduction to Networks (Coming Soon) */}
+              <div className="transform transition-transform duration-300 hover:scale-110 flex flex-col items-center">
+                <div className="bg-white w-full max-w-[245px] h-32 sm:h-36 lg:h-40 text-black flex items-center justify-center mb-3 text-xs sm:text-sm">
+                  Coming Soon!
+                </div>
+                <p className="text-center font-semibold text-sm sm:text-base">Introduction to Networks</p>
+                <p className="text-center font-thin text-xs sm:text-sm">Cisco</p>
+              </div>
 
+              {/* Certification 3: Introduction to SQL */}
+              <div className="transform transition-transform duration-300 hover:scale-110 flex flex-col items-center sm:col-span-2 lg:col-span-1">
+                <div className="relative bg-white w-full max-w-[245px] h-32 sm:h-36 lg:h-40 overflow-hidden mb-3">
+                  <Image
+                    src={introsql}
+                    alt="Introduction to SQL Certificate"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 245px"
+                  />
+                </div>
+                <p className="text-center font-semibold text-sm sm:text-base">Introduction to SQL</p>
+                <p className="text-center font-thin text-xs sm:text-sm">Sololearn</p>
+              </div>
+
+            </div>
           </div>
-
         </div>
+      </div>
 
-      {/* ✅ Footer */}
-          <Footer />
+      {/* ===== TECH STACK COMPONENT ===== */}
+      <TechStack />
+
+      {/* ===== FOOTER COMPONENT ===== */}
+      <Footer />
     </>
   );
 }
