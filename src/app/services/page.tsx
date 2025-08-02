@@ -9,7 +9,7 @@ import window from '@/assets/window.png';
 
 export default function Services() {
   return (
-    <>
+    <div className="bg-white min-h-screen">
       {/* ===== NAVBAR ===== */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Navbar />
@@ -254,15 +254,21 @@ export default function Services() {
             I&apos;m committed to delivering high-quality solutions that meet your specific needs and exceed your expectations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="/danieldavidresume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
             <button className="text-[#222222] border border-[#222222] hover:bg-[#222222] hover:text-white px-8 py-3 rounded-md cursor-pointer transition-colors duration-300 text-sm sm:text-base font-medium">
               Download Resume
             </button>
+            </a>
+
           </div>
         </div>
       </div>
 
       {/* ===== FOOTER ===== */}
       <Footer />
-    </>
+    </div>
   );
 }

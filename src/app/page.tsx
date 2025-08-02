@@ -25,7 +25,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-white min-h-screen">
       {/* ===== HERO SECTION ===== */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Navbar />
@@ -35,7 +35,7 @@ export default function Home() {
             
             {/* Hero Text Content */}
             <div className="w-full lg:w-[60%] text-center lg:text-left">
-              <h1 className="text-lg sm:text-xl font-light font-reddit-sans mt-10 sm:mt-20">
+              <h1 className="text-lg sm:text-xl font-light font-reddit-sans mt-10 sm:mt-20 text-[#222222]">
                 Hi there, I am
               </h1>
 
@@ -170,7 +170,7 @@ export default function Home() {
             </h2>
             <Link
             href="/projects">
-            <button className="bg-white text-[#222222] hover:bg-[#222222] hover:text-white border border-[#222222] px-4 py-2 rounded-md cursor-pointer transition-colors duration-300 text-sm sm:text-base">
+            <button className="bg-white text-[#222222] hover:bg-[#222222] hover:text-white border border-[#222222] px-4 py-2 rounded-md cursor-pointer transition-colors duration-300 text-xs sm:text-sm">
               More Projects
             </button>
             </Link>
@@ -379,6 +379,6 @@ export default function Home() {
 
       {/* ===== FOOTER COMPONENT ===== */}
       <Footer />
-    </>
+    </div>
   );
 }

@@ -9,7 +9,7 @@ import project1 from '@/assets/project1.png';
 
 export default function Projects() {
   return (
-    <>
+    <div className="bg-white min-h-screen">
       {/* ===== NAVBAR ===== */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Navbar />
@@ -283,6 +283,6 @@ export default function Projects() {
 
       {/* ===== FOOTER ===== */}
       <Footer />
-    </>
+    </div>
   );
 }
