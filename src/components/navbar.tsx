@@ -53,7 +53,7 @@ export default function Navbar() {
 
         <li>
           <Link
-            href="#connect"
+            href="/connect"
             className="relative group transition text-[#222222] hover:text-black"
           >
             Connect

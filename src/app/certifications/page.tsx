@@ -5,6 +5,7 @@ import Image from 'next/image';
 // Import your certificate images
 import introsql from '@/assets/introsql.jpg';
 import sqlintermediate from '@/assets/sqlintermediate.jpg';
+import csharpcert from '@/assets/c_sharp_cert.png';
 
 export default function Certifications() {
   return (
@@ -46,7 +47,35 @@ export default function Certifications() {
           {/* Certifications Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 font-reddit-sans">
 
-            {/* Certification 1: Intermediate SQL */}
+            {/* Certification 1: c# foundational */}
+            <div className="transform transition-transform duration-300 hover:scale-105 flex flex-col items-center bg-white/5 p-6 rounded-lg">
+              <div className="relative bg-white w-full max-w-[280px] h-40 sm:h-44 lg:h-48 overflow-hidden mb-4 rounded-md">
+                <Image
+                  src={csharpcert}
+                  alt="c# fountational"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px"
+                />
+              </div>
+              <h3 className="text-white text-lg sm:text-xl font-semibold text-center mb-2">
+                Foundational C# with Microsoft
+              </h3>
+              <p className="text-white/80 text-sm sm:text-base font-light text-center mb-2">
+                Freecodecamp
+              </p>
+              <p className="text-white/60 text-xs sm:text-sm text-center">
+                Completed: 2025
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+                <span className="bg-white/20 text-white px-2 py-1 rounded-full text-xs">
+                  C#
+                </span>
+              </div>
+            </div>
+
+
+            {/* Certification 2: Intermediate SQL */}
             <div className="transform transition-transform duration-300 hover:scale-105 flex flex-col items-center bg-white/5 p-6 rounded-lg">
               <div className="relative bg-white w-full max-w-[280px] h-40 sm:h-44 lg:h-48 overflow-hidden mb-4 rounded-md">
                 <Image
@@ -64,7 +93,7 @@ export default function Certifications() {
                 Sololearn
               </p>
               <p className="text-white/60 text-xs sm:text-sm text-center">
-                Completed: 2024
+                Completed: 2025
               </p>
               <div className="mt-4 flex flex-wrap gap-2 justify-center">
                 <span className="bg-white/20 text-white px-2 py-1 rounded-full text-xs">
@@ -94,7 +123,7 @@ export default function Certifications() {
                 Sololearn
               </p>
               <p className="text-white/60 text-xs sm:text-sm text-center">
-                Completed: 2023
+                Completed: 2025
               </p>
               <div className="mt-4 flex flex-wrap gap-2 justify-center">
                 <span className="bg-white/20 text-white px-2 py-1 rounded-full text-xs">
