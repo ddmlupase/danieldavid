@@ -76,7 +76,7 @@ export default function Status() {
 
           <div className="flex items-center justify-center gap-3 sm:gap-4">
             <h1 className="font-bold text-5xl sm:text-6xl transition-transform duration-300 transform hover:scale-110">
-              {isInView ? <CountUp start={0} end={2} duration={2} formattingFn={(value) => value.toString().padStart(2, '0')} /> : "00"}
+              {isInView ? <CountUp start={0} end={3} duration={2} formattingFn={(value) => value.toString().padStart(2, '0')} /> : "00"}
             </h1>
             <p className="text-xs sm:text-sm">Obtained Certifications.</p>
           </div>
