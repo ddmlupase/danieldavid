@@ -38,7 +38,7 @@ export default function Services() {
   return (
     <div>
       {/* ===== SERVICES SECTION ===== */}
-      <div className="w-full bg-[#222222] py-16 sm:py-20 lg:py-24" id="services">
+      <div className="w-full bg-[#222222] py-16 sm:py-20 lg:py-24 mt-45" id="services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Services Header */}

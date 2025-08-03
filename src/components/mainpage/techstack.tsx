@@ -118,7 +118,7 @@ export default function TechStack() {
         }
       `}</style>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" ref={sectionRef}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-55 mb-100" ref={sectionRef}>
         <div className="flex flex-col items-center justify-center mt-20 sm:mt-28 md:mt-32 lg:mt-40 mb-8 sm:mb-10 md:mb-12 lg:mb-15">
           <h1
             className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-reddit-sans text-[#222222] mb-2 sm:mb-3 text-center transition-all duration-800 ease-out ${

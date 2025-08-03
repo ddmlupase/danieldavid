@@ -9,7 +9,7 @@ export default function Status() {
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-55 mb-55">
       <motion.div
         ref={ref}
         className="flex flex-col items-center justify-center my-12 sm:my-16 md:my-20 lg:my-24"
