@@ -39,7 +39,7 @@ export default function Status() {
 
           <li className="flex items-center text-center min-w-0 gap-2 lg:gap-3 xl:gap-4 max-w-fit">
             <h1 className="font-bold text-6xl lg:text-8xl xl:text-9xl transition-transform duration-300 transform hover:scale-110 flex-shrink-0">
-              {isInView ? <CountUp start={0} end={2} duration={2} formattingFn={(value) => value.toString().padStart(2, '0')} /> : "00"}
+              {isInView ? <CountUp start={0} end={3} duration={2} formattingFn={(value) => value.toString().padStart(2, '0')} /> : "00"}
             </h1>
             <p className="text-sm lg:text-base xl:text-lg whitespace-nowrap">Obtained Certifications.</p>
           </li>
