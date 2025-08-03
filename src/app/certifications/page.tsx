@@ -218,7 +218,7 @@ export default function Certifications() {
               SMART Technopreneurship 101
             </h3>
             <p className="text-[#222222]/80 text-sm sm:text-base font-light text-center mb-2">
-              Skill
+              TESDA
             </p>
             <p className="text-[#222222]/60 text-xs sm:text-sm text-center">
               Expected: 2025
