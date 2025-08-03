@@ -1,18 +1,11 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import DD from '@/assets/DD.png';
+
 
 export default function Navbar() {
   return (
     <nav className="flex flex-col sm:flex-row justify-between items-center py-10 gap-6 sm:gap-0">
       {/* Logo / Name */}
       <h1 className="text-3xl font-extrabold font-reddit-sans text-[#222222] flex gap-2">
-        <Image
-        src={DD}
-        alt="dd"
-        width={40}
-        className=""
-        />
         danieldavid
       </h1>
 
