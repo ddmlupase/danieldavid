@@ -7,7 +7,7 @@ import youtube from '@/assets/youtube.png';
 export default function Footer() {
   return (
     <footer className="bg-[#222222] text-white" id="connect">
-      <div className="max-w-6xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-8 py-16">
         
         {/* Main Content */}
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 mb-12">
