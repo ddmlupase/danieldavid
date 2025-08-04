@@ -51,7 +51,7 @@ export default function Certifications() {
             A collection of certifications I&apos;ve earned to support my learning and development in tech.
           </p>
           <Link href="/certifications">
-            <button className="mt-6 sm:mt-10 text-white text-xs sm:text-sm bg-transparent border border-white px-3 py-2 rounded-md hover:bg-white hover:text-black transition-all duration-200">
+            <button className="cursor-pointer mt-6 sm:mt-10 text-white text-xs sm:text-sm bg-transparent border border-white px-3 py-2 rounded-md hover:bg-white hover:text-black transition-all duration-200">
               More Certifications
             </button>
           </Link>
