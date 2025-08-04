@@ -181,32 +181,6 @@ export default function Certifications() {
             </div>
           </div>
 
-          {/* Certification 2: Advanced SQL (Future) */}
-          <div className="transform transition-transform duration-300 hover:scale-105 flex flex-col items-center border-2 border-[#222222] p-6 rounded-lg">
-            <div className="bg-[#222222] w-full max-w-[280px] h-40 sm:h-44 lg:h-48 text-white flex items-center justify-center mb-4 rounded-md">
-              <div className="text-center">
-                <p className="text-sm">Planning</p>
-              </div>
-            </div>
-            <h3 className="text-[#222222] text-lg sm:text-xl font-semibold text-center mb-2">
-              Advanced SQL
-            </h3>
-            <p className="text-[#222222]/80 text-sm sm:text-base font-light text-center mb-2">
-              Sololearn
-            </p>
-            <p className="text-[#222222]/60 text-xs sm:text-sm text-center">
-              Expected: 2025
-            </p>
-            <div className="mt-4 flex flex-wrap gap-2 justify-center">
-              <span className="bg-[#222222]/20 text-[#222222] px-2 py-1 rounded-full text-xs">
-                SQL
-              </span>
-              <span className="bg-[#222222]/20 text-[#222222] px-2 py-1 rounded-full text-xs">
-                Advanced
-              </span>
-            </div>
-          </div>
-
           {/* Certification 3: Database Administration */}
           <div className="transform transition-transform duration-300 hover:scale-105 flex flex-col items-center border-2 border-[#222222] p-6 rounded-lg">
             <div className="bg-[#222222] w-full max-w-[280px] h-40 sm:h-44 lg:h-48 text-white flex items-center justify-center mb-4 rounded-md">
