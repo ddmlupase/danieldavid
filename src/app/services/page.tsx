@@ -254,7 +254,7 @@ export default function Services() {
             I&apos;m committed to delivering high-quality solutions that meet your specific needs and exceed your expectations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="/danieldavidresume.pdf"
+            <a href="/danieldavid.resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -28,7 +28,7 @@ export default function Hero() {
           </p>
 
           <div className="opacity-0 translate-y-4 animate-[fadeInUp_0.6s_ease-out_1.2s_forwards]">
-            <a href="/danieldavidresume.pdf"
+            <a href="/danieldavid.resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
