@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-
 export default function Navbar() {
   return (
     <nav className="flex flex-col sm:flex-row justify-between items-center py-10 gap-6 sm:gap-0">
@@ -11,7 +10,6 @@ export default function Navbar() {
 
       {/* Nav Links */}
       <ul className="flex flex-wrap justify-center sm:justify-end gap-6 sm:gap-12 text-[#222222] font-thin text-sm sm:text-base font-reddit-sans">
-
         <li>
           <Link
             href="/"
@@ -61,8 +59,6 @@ export default function Navbar() {
             <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-black transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </li>
-
-        
       </ul>
     </nav>
   );
