@@ -47,7 +47,7 @@ export default function Certifications() {
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-7 mt-1">
             MY CERTIFICATIONS
           </h1>
-          <p className="text-sm sm:text-base leading-relaxed">
+          <p className="text-sm sm:text-base leading-relaxed ">
             A collection of certifications I&apos;ve earned to support my learning and development in tech.
           </p>
           <Link href="/certifications">
