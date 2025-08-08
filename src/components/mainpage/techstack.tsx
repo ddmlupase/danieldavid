@@ -79,7 +79,7 @@ export default function TechStack() {
         animation: isVisible ? `bounce-in 0.6s ease-out ${index * 100}ms both` : "none",
       }}
     >
-      <div className="relative p-2 sm:p-3 md:p-4 rounded-lg sm:rounded-xl bg-white/80 backdrop-blur-sm border border-gray-200/50 group-hover:bg-white group-hover:border-blue-300/50 transition-all duration-200">
+      <div className="relative p-2 sm:p-3 md:p-4 rounded-lg sm:rounded-xl bg-white/80 backdrop-blur-sm border border-white group-hover:bg-white group-hover:border-blue-300/50 transition-all duration-200">
         <Image
           src={tech.src}
           alt={tech.alt}
@@ -121,7 +121,7 @@ export default function TechStack() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-55 mb-100" ref={sectionRef}>
         <div className="flex flex-col items-center justify-center mt-20 sm:mt-28 md:mt-32 lg:mt-40 mb-8 sm:mb-10 md:mb-12 lg:mb-15">
           <h1
-            className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-reddit-sans text-[#222222] mb-2 sm:mb-3 text-center transition-all duration-800 ease-out ${
+            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold font-reddit-sans text-[#222222] mb-2 sm:mb-3 text-center transition-all duration-800 ease-out ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-4 opacity-0"

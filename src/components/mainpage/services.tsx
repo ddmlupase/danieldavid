@@ -68,10 +68,10 @@ export default function Services() {
                 />
               </div>
               <h3 className="text-white text-lg sm:text-xl lg:text-2xl font-medium mt-6 sm:mt-8 leading-tight">
-                RELATIONAL DATABASE DESIGN SERVICE
+                RELATIONAL DATABASE <br /> DESIGN SERVICE
               </h3>
               <p className="text-white text-sm sm:text-base font-thin mt-4 sm:mt-6 lg:mt-9 leading-relaxed">
-                Designing ER diagrams and building structured database schemas using MySQL Workbench.
+                Designing ER diagrams and building <br />structured database schemas using <br />MySQL Workbench.
               </p>
             </div>
 
@@ -90,7 +90,7 @@ export default function Services() {
                 WEBSITE DEVELOPMENT
               </h3>
               <p className="text-white text-sm sm:text-base font-thin mt-4 sm:mt-6 lg:mt-17 leading-relaxed">
-                Developing responsive websites with both frontend and backend functionality.
+                Developing responsive websites with <br />both frontend and backend functionality.
               </p>
             </div>
 
@@ -109,7 +109,7 @@ export default function Services() {
                 WINDOWS SOFTWARE DEVELOPMENT
               </h3>
               <p className="text-white text-sm sm:text-base font-thin mt-4 sm:mt-6 lg:mt-8 leading-relaxed">
-                Creating custom Windows applications using C# and Visual Studio.
+                Creating custom Windows applications <br />using C# and Visual Studio.
               </p>
             </div>
 

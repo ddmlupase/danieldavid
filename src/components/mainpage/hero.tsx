@@ -9,7 +9,7 @@ export default function Hero() {
         
         {/* Hero Text Content */}
         <div className="w-full lg:w-[60%] text-center lg:text-left opacity-0 translate-y-8 animate-[fadeInUp_0.8s_ease-out_0.2s_forwards]">
-          <h1 className="text-lg sm:text-xl font-light font-reddit-sans mt-2 sm:mt-4 lg:mt-20 text-[#222222] opacity-0 translate-y-4 animate-[fadeInUp_0.6s_ease-out_0.4s_forwards]">
+          <h1 className="text-lg sm:text-xl font-regular font-reddit-sans mt-2 sm:mt-4 lg:mt-20 text-[#222222] opacity-0 translate-y-4 animate-[fadeInUp_0.6s_ease-out_0.4s_forwards]">
             Hi there, I am
           </h1>
 
@@ -23,8 +23,8 @@ export default function Hero() {
 
           <p className="max-w-none lg:max-w-xl text-sm sm:text-base font-light font-reddit-sans text-[#222222] leading-relaxed mt-3 sm:mt-4 lg:mt-7 opacity-0 translate-y-4 animate-[fadeInUp_0.6s_ease-out_1s_forwards]">
             Daniel David is a dedicated database-focused student passionate about organizing, 
-            managing, and securing data. With a growing foundation in SQL, database design, and 
-            data-driven development, he aims to build efficient, scalable systems.
+            managing, and securing data. With a growing foundation in <br /> SQL, database design, and 
+            data-driven development, he aims to build <br /> efficient, scalable systems.
           </p>
 
           <div className="opacity-0 translate-y-4 animate-[fadeInUp_0.6s_ease-out_1.2s_forwards]">
@@ -32,8 +32,8 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="mt-4 sm:mt-6 lg:mt-8 bg-white text-[#222222] hover:bg-[#222222] hover:text-white border border-[#222222] px-4 sm:px-6 py-2 sm:py-3 rounded-md cursor-pointer transition-colors duration-300 text-sm sm:text-base transform hover:scale-105 transition-transform">
-                Download Resume
+              <button className="mt-4 sm:mt-6 lg:mt-8 bg-white text-[#222222] hover:bg-[#222222] hover:text-white border border-[#222222] px-2 sm:px-4 py-1 sm:py-2 rounded-md cursor-pointer transition-colors duration-300 text-sm sm:text-base transform hover:scale-105 transition-transform">
+                Download Résumé
               </button>
             </a>
           </div>

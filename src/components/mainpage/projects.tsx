@@ -31,7 +31,7 @@ export default function Projects() {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             </div>
 
-            <p className="text-[#222222] text-sm sm:text-base font-thin mt-3 font-reddit-sans transition-colors duration-300 group-hover:text-gray-600">
+            <p className="text-black text-xs sm:text-sm font-normal mt-3 font-reddit-sans transition-colors duration-300 group-hover:text-gray-600">
               Entity Relationship Diagram Design
             </p>
             <h1 className="text-[#222222] text-base sm:text-lg font-bold font-reddit-sans mt-1 transition-colors duration-300 group-hover:text-gray-800">
@@ -55,8 +55,8 @@ export default function Projects() {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             </div>
 
-            <p className="text-[#222222] text-sm sm:text-base font-thin mt-3 font-reddit-sans transition-colors duration-300 group-hover:text-gray-600">
-              SQL integration with frontend, real-time updates, transactions
+            <p className="text-black text-xs sm:text-sm font-normal mt-3 font-reddit-sans transition-colors duration-300 group-hover:text-gray-600">
+              SQL integration with frontend
             </p>
             <h1 className="text-[#222222] text-base sm:text-lg font-bold font-reddit-sans mt-1 transition-colors duration-300 group-hover:text-gray-800">
               Task Management Web App
@@ -85,7 +85,7 @@ export default function Projects() {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             </div>
             
-            <p className="text-[#222222] text-sm sm:text-base font-thin mt-3 font-reddit-sans transition-colors duration-300 group-hover:text-gray-600">
+            <p className="text-black text-xs sm:text-sm font-normal mt-3 font-reddit-sans transition-colors duration-300 group-hover:text-gray-600">
               Complex joins, reports, data integrity
             </p>
             <h1 className="text-[#222222] text-base sm:text-lg font-bold font-reddit-sans mt-1 transition-colors duration-300 group-hover:text-gray-800">
@@ -106,7 +106,7 @@ export default function Projects() {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             </div>
 
-            <p className="text-[#222222] text-sm sm:text-base font-thin mt-3 font-reddit-sans transition-colors duration-300 group-hover:text-gray-600">
+            <p className="text-black text-xs sm:text-sm font-normal mt-3 font-reddit-sans transition-colors duration-300 group-hover:text-gray-600">
               Entity Relationship Diagram Design
             </p>
             <h1 className="text-[#222222] text-base sm:text-lg font-bold font-reddit-sans mt-1 transition-colors duration-300 group-hover:text-gray-800">
@@ -130,8 +130,8 @@ export default function Projects() {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             </div>
 
-            <p className="text-[#222222] text-sm sm:text-base font-thin mt-3 font-reddit-sans transition-colors duration-300 group-hover:text-gray-600">
-              Many-to-many relationships, stored procedures, indexing
+            <p className="text-black text-xs sm:text-sm font-normal mt-3 font-reddit-sans transition-colors duration-300 group-hover:text-gray-600">
+              Many-to-many relationships
             </p>
             <h1 className="text-[#222222] text-base sm:text-lg font-bold font-reddit-sans mt-1 transition-colors duration-300 group-hover:text-gray-800">
               E-commerce Product & Order DB

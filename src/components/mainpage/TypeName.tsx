@@ -63,7 +63,7 @@ export default function TypeName() {
 
   return (
     <div className="font-reddit-sans">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[90px] font-bold text-[#222222] leading-tight">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-bold text-[#222222] leading-tight">
         <span>{displayText}</span>
         <span 
           className={`transition-opacity duration-100 ${showCursor ? 'opacity-100' : 'opacity-0'}`}

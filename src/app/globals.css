@@ -10,6 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-reddit-sans: var(--font-reddit-sans);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,7 +23,8 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Change this line to use Reddit Sans */
+  font-family: var(--font-reddit-sans), Arial, Helvetica, sans-serif;
 }
 
 @keyframes typing {
@@ -74,4 +76,3 @@ body {
     transform: translateX(0);
   }
 }
-
