@@ -56,7 +56,7 @@ export default function Services() {
               <h3 className="text-[#222222] text-lg sm:text-xl lg:text-2xl font-extrabold mb-8 leading-tight">
                 RELATIONAL DATABASE<br />DESIGN SERVICE
               </h3>
-              <p className="text-[#666666] text-sm sm:text-base font-medium leading-relaxed max-w-xs">
+              <p className="text-[#666666] text-sm sm:text-base font-medium leading-relaxed max-w-xs mx-auto text-center">
                 Designing ER diagrams and building structured database schemas using MySQL Workbench.
               </p>
             </div>
@@ -77,7 +77,7 @@ export default function Services() {
               <h3 className="text-[#222222] text-lg sm:text-xl lg:text-2xl font-extrabold mb-8 leading-tight">
                 WEBSITE<br />DEVELOPMENT
               </h3>
-              <p className="text-[#666666] text-sm sm:text-base font-medium leading-relaxed max-w-xs">
+              <p className="text-[#666666] text-sm sm:text-base font-medium leading-relaxed max-w-xs mx-auto text-center">
                 Developing responsive websites with both frontend and backend functionality.
               </p>
             </div>
@@ -98,7 +98,7 @@ export default function Services() {
               <h3 className="text-[#222222] text-lg sm:text-xl lg:text-2xl font-extrabold mb-8 leading-tight">
                 WINDOWS SOFTWARE<br />DEVELOPMENT
               </h3>
-              <p className="text-[#666666] text-sm sm:text-base font-medium leading-relaxed max-w-xs">
+              <p className="text-[#666666] text-sm sm:text-base font-medium leading-relaxed max-w-xs mx-auto text-center">
                 Creating custom Windows applications using C# and Visual Studio.
               </p>
             </div>
@@ -133,7 +133,7 @@ export default function Services() {
               <h3 className="text-white text-lg sm:text-xl lg:text-2xl font-extrabold mb-8 leading-tight">
                 Coming Soon!
               </h3>
-              <p className="text-white text-sm sm:text-base font-medium leading-relaxed max-w-xs">
+              <p className="text-white text-sm sm:text-base font-medium leading-relaxed max-w-xs mx-auto text-center">
                 This service is still in progress and will launch soon.
               </p>
             </div>
@@ -147,7 +147,7 @@ export default function Services() {
               <h3 className="text-white text-lg sm:text-xl lg:text-2xl font-extrabold mb-8 leading-tight">
                 Coming Soon!
               </h3>
-              <p className="text-white text-sm sm:text-base font-medium leading-relaxed max-w-xs">
+              <p className="text-white text-sm sm:text-base font-medium leading-relaxed max-w-xs mx-auto text-center">
                 This service is still in progress and will launch soon.
               </p>
             </div>
@@ -161,7 +161,7 @@ export default function Services() {
               <h3 className="text-white text-lg sm:text-xl lg:text-2xl font-extrabold mb-8 leading-tight">
                 Coming Soon!
               </h3>
-              <p className="text-white text-sm sm:text-base font-medium leading-relaxed max-w-xs">
+              <p className="text-white text-sm sm:text-base font-medium leading-relaxed max-w-xs mx-auto text-center">
                 This service is still in progress and will launch soon.
               </p>
             </div>
