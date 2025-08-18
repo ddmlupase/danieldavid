@@ -11,6 +11,7 @@ import vscode from '@/assets/vscode.png';
 import drawio from '@/assets/drawio.png';
 import nodejs from '@/assets/nodejs.png';
 import prisma from '@/assets/prisma.png';
+import davinciresolve from '@/assets/davinciresolve.png'
 
 import { useEffect, useRef, useState } from "react";
 import Image, { StaticImageData } from "next/image";
@@ -26,7 +27,7 @@ export default function TechStack() {
     { name: "CSS", src: css, alt: "css" },
     { name: "HTML", src: html, alt: "html" },
     { name: "TypeScript", src: ts, alt: "ts" },
-    { name: "VS Code", src: vscode, alt: "vscode" },
+    { name: "VS Code", src: vscode, alt: "vscode" }
   ];
 
   const techStackRow2 = [
@@ -35,7 +36,10 @@ export default function TechStack() {
     { name: "GitHub", src: github, alt: "github" },
     { name: "Visual Studio", src: visualstudio, alt: "visualstudio" },
     { name: "Node.js", src: nodejs, alt: "nodejs" },
-    { name: "Prisma", src: prisma, alt: "prisma" },
+    { name: "Prisma", src: prisma, alt: "prisma" }
+  ];
+  const techStackRow3 = [
+    { name: "Davinci Resolve", src: davinciresolve, alt: "davinciresolve" }
   ];
 
   useEffect(() => {
@@ -157,6 +161,18 @@ export default function TechStack() {
           {/* Second Row */}
           <ul className="flex gap-3 sm:gap-4 md:gap-6 lg:gap-8 justify-center mb-10 sm:mb-12 md:mb-16 lg:mb-20 flex-wrap">
             {techStackRow2.map((tech, index) => (
+              <TechIcon
+                key={tech.alt}
+                tech={tech}
+                index={index + techStackRow1.length}
+                totalItems={techStackRow2.length}
+              />
+            ))}
+          </ul>
+
+          {/* Second Row */}
+          <ul className="flex gap-3 sm:gap-4 md:gap-6 lg:gap-8 justify-center mb-10 sm:mb-12 md:mb-16 lg:mb-20 flex-wrap">
+            {techStackRow3.map((tech, index) => (
               <TechIcon
                 key={tech.alt}
                 tech={tech}

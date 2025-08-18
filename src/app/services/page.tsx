@@ -6,8 +6,7 @@ import Image from 'next/image';
 import database from '@/assets/database.png';
 import domain from '@/assets/domain.png';
 import window from '@/assets/window.png';
-
-import Link from "next/link";
+import videoediting from '@/assets/videoediting.png'
 
 export default function Services() {
   return (
@@ -127,14 +126,20 @@ export default function Services() {
             <div className="bg-[#222222] border border-gray-200 rounded-lg p-8 sm:p-10 lg:p-12 text-center">
               <div className="flex justify-center mb-2">
                 <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 border-[#222222] flex items-center justify-center">
-                 <h1 className="text-white font-extrabold text-lg sm:text-xl lg:text-9xl">...</h1>
+                 <Image
+                    src={videoediting}
+                    alt="video edit"
+                    width={50}
+                    height={50}
+                    className="sm:w-16 sm:h-16 lg:w-20 lg:h-20"
+                    />
                 </div>
               </div>
               <h3 className="text-white text-lg sm:text-xl lg:text-2xl font-extrabold mb-8 leading-tight">
-                Coming Soon!
+                Video Editing
               </h3>
               <p className="text-white text-sm sm:text-base font-medium leading-relaxed max-w-xs mx-auto text-center">
-                This service is still in progress and will launch soon.
+                I provide professional video editing solutions for social media platforms and digital content creation. 
               </p>
             </div>
             {/* Service 2 */}

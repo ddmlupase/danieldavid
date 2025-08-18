@@ -3,6 +3,7 @@ import facebook from '@/assets/facebook.png';
 import linkedin from '@/assets/linkedin.png';
 import githublight from '@/assets/githublight.png';
 import youtube from '@/assets/youtube.png';
+import tiktok from '@/assets/tik-tok.png'
 
 export default function Footer() {
   return (
@@ -62,6 +63,15 @@ export default function Footer() {
                   aria-label="YouTube"
                 >
                   <Image src={youtube} alt="YouTube" width={24} height={24} />
+                </a>
+                <a
+                  href="https://www.tiktok.com/@ddlups"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors duration-200"
+                  aria-label="Tiktok"
+                >
+                  <Image src={tiktok} alt="Tiktok" width={24} height={24} />
                 </a>
               </div>
             </div>
