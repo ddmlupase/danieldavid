@@ -114,7 +114,7 @@ export default function Connect() {
               href="tel:+1234567890" 
               className="inline-block text-[#222222] text-lg sm:text-xl font-medium font-reddit-sans hover:text-gray-600 transition-all duration-300 mb-6 hover:scale-105 transform"
             >
-              +639-6062-5920
+              +639-60602-5920
             </a>
 
             <div className="mt-8">

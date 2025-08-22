@@ -12,6 +12,9 @@ import drawio from '@/assets/drawio.png';
 import nodejs from '@/assets/nodejs.png';
 import prisma from '@/assets/prisma.png';
 import davinciresolve from '@/assets/davinciresolve.png'
+import csharp from '@/assets/Csharp.png'
+import python from '@/assets/python.png'
+import react from '@/assets/react.png'
 
 import { useEffect, useRef, useState } from "react";
 import Image, { StaticImageData } from "next/image";
@@ -39,7 +42,10 @@ export default function TechStack() {
     { name: "Prisma", src: prisma, alt: "prisma" }
   ];
   const techStackRow3 = [
-    { name: "Davinci Resolve", src: davinciresolve, alt: "davinciresolve" }
+    { name: "Davinci Resolve", src: davinciresolve, alt: "davinciresolve" },
+    { name: "CSharp", src: csharp, alt: "csharp" },
+    { name: "Python", src: python, alt: "python" },
+    { name: "React", src: react, alt: "react" }
   ];
 
   useEffect(() => {
@@ -159,7 +165,7 @@ export default function TechStack() {
           </ul>
 
           {/* Second Row */}
-          <ul className="flex gap-3 sm:gap-4 md:gap-6 lg:gap-8 justify-center mb-10 sm:mb-12 md:mb-16 lg:mb-20 flex-wrap">
+          <ul className="flex gap-3 sm:gap-4 md:gap-6 lg:gap-8 justify-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 flex-wrap">
             {techStackRow2.map((tech, index) => (
               <TechIcon
                 key={tech.alt}
@@ -170,14 +176,14 @@ export default function TechStack() {
             ))}
           </ul>
 
-          {/* Second Row */}
-          <ul className="flex gap-3 sm:gap-4 md:gap-6 lg:gap-8 justify-center mb-10 sm:mb-12 md:mb-16 lg:mb-20 flex-wrap">
+          {/* Third Row */}
+          <ul className="flex gap-3 sm:gap-4 md:gap-6 lg:gap-8 justify-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 flex-wrap">
             {techStackRow3.map((tech, index) => (
               <TechIcon
                 key={tech.alt}
                 tech={tech}
-                index={index + techStackRow1.length}
-                totalItems={techStackRow2.length}
+                index={index + techStackRow1.length + techStackRow2.length}
+                totalItems={techStackRow3.length}
               />
             ))}
           </ul>
