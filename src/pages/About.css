@@ -1,0 +1,277 @@
+/* About.css */
+.about-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 120px 24px 64px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1a1a1a;
+}
+
+/* Top Header Section */
+.about-header {
+  margin-bottom: 40px;
+}
+
+.about-header h1 {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.header-description {
+  font-size: 0.9375rem;
+  color: #666;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Featured Image */
+.featured-image-container {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.featured-image {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  filter: grayscale(100%);
+  display: block;
+}
+
+/* My Story Grid */
+.story-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 80px;
+}
+
+.story-content h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.story-text p {
+  color: #555;
+  margin-bottom: 24px;
+  line-height: 1.7;
+  font-size: 0.9375rem;
+}
+
+/* Education Sidebar */
+.education-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.edu-item {
+  margin-bottom: 32px;
+}
+
+.edu-degree {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.edu-school {
+  color: #666;
+  display: block;
+}
+
+.edu-year {
+  color: #999;
+  font-size: 14px;
+}
+
+/* Experience Section */
+.experience-section {
+  margin-top: 100px;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.experience-header h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.experience-header p {
+  max-width: 400px;
+  color: #666;
+  text-align: right;
+  line-height: 1.5;
+  font-size: 0.9375rem;
+}
+
+.experience-card {
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f5f5f5;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eee;
+}
+
+.card-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+}
+
+.detail-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-group label,
+.description-column label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.detail-group p {
+  color: #888;
+  font-size: 0.9375rem;
+}
+
+.description-column p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.9375rem;
+}
+
+/* Responsive: Tablet */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 100px 20px 48px;
+  }
+
+  .about-header h1 {
+    font-size: 32px;
+  }
+
+  .header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-description {
+    font-size: 16px;
+  }
+
+  .featured-image-container {
+    margin-bottom: 48px;
+  }
+
+  .featured-image {
+    border-radius: 16px;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .story-content h2 {
+    font-size: 26px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .experience-header p {
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .card-content-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 480px) {
+  .about-page {
+    padding: 90px 16px 40px;
+  }
+
+  .about-header h1 {
+    font-size: 28px;
+  }
+
+  .header-description {
+    font-size: 15px;
+  }
+
+  .featured-image {
+    border-radius: 12px;
+  }
+
+  .story-content h2 {
+    font-size: 22px;
+  }
+
+  .education-section h2 {
+    font-size: 18px;
+  }
+
+  .experience-header h2 {
+    font-size: 26px;
+  }
+
+  .experience-card {
+    padding: 20px;
+  }
+
+  .company-info {
+    font-size: 16px;
+  }
+}
