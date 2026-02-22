@@ -35,7 +35,7 @@ const Projects = () => {
           <div className="project-info">
             <div className="meta-row">
               <span>Design</span>
-              <span style={{ color: '#ccc' }}>—</span>
+              <span style={{ color: '#d8d8d4' }}>—</span>
               <span>Jan 21, 2022</span>
             </div>
             <h2>What did I learn from doing 50+ design sprints?</h2>
@@ -51,7 +51,7 @@ const Projects = () => {
           <div className="project-info">
             <div className="meta-row">
               <span>Design</span>
-              <span style={{ color: '#ccc' }}>—</span>
+              <span style={{ color: '#d8d8d4' }}>—</span>
               <span>Jan 21, 2022</span>
             </div>
             <h2>Figma vs Sketch - What design tool to choose in 2022?</h2>
@@ -67,7 +67,7 @@ const Projects = () => {
           <div className="project-info">
             <div className="meta-row">
               <span>College</span>
-              <span style={{ color: '#ccc' }}>—</span>
+              <span style={{ color: '#d8d8d4' }}>—</span>
               <span>Mar 15, 2022</span>
             </div>
             <h2>How to build a scalable design system from scratch</h2>

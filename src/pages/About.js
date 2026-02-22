@@ -14,7 +14,7 @@ const About = () => {
             in vel tristique. Aenean urna, nulla massa mauris. Blandit neque velit
             luctus accumsan. Sagittis lorem phasellus fermentum.
           </p>
-          <a href="/contact" className="arrow-link">Contact me ↗</a>
+          <a href="/contact" className="arrow-link">Contact me <span className="link-arrow">↗</span></a>
         </div>
       </header>
 
@@ -57,21 +57,15 @@ const About = () => {
           <h2>Education</h2>
           
           <div className="edu-item">
-            <span className="edu-degree">UX Research</span>
-            <span className="edu-school">University of Oxford</span>
-            <span className="edu-year">2014 — 2016</span>
+            <span className="edu-degree">Information Technology</span>
+            <span className="edu-school">Ateneo de Davao University</span>
+            <span className="edu-year">2022 — 2027</span>
           </div>
 
           <div className="edu-item">
-            <span className="edu-degree">Advanced UI Design</span>
-            <span className="edu-school">Caltech University</span>
-            <span className="edu-year">2011 — 2013</span>
-          </div>
-
-          <div className="edu-item">
-            <span className="edu-degree">Graphic Design</span>
-            <span className="edu-school">Stanford University</span>
-            <span className="edu-year">2006 — 2010</span>
+            <span className="edu-degree">High School Degree</span>
+            <span className="edu-school">Notre Dame of Kidapawan College Inc.</span>
+            <span className="edu-year">2016 — 2022</span>
           </div>
         </aside>
       </main>
@@ -91,7 +85,7 @@ const About = () => {
             <div className="company-info">
               Business, LLC.
             </div>
-            <a href="#" className="arrow-link" style={{fontSize: '14px'}}>View website ↗</a>
+            <a href="#" className="arrow-link">View website <span className="link-arrow">↗</span></a>
           </div>
 
           <div className="card-content-grid">
@@ -123,7 +117,7 @@ const About = () => {
             <div className="company-info">
               Company, Inc.
             </div>
-            <a href="#" className="arrow-link" style={{fontSize: '14px'}}>View website ↗</a>
+            <a href="#" className="arrow-link">View website <span className="link-arrow">↗</span></a>
           </div>
 
           <div className="card-content-grid">

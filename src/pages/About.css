@@ -1,21 +1,47 @@
-/* About.css */
-.about-page {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 120px 24px 64px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: #1a1a1a;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* About.css - unified with Home design tokens */
+
+:root {
+  --bg: #f5f5f3;
+  --text-primary: #1a1a1a;
+  --text-secondary: #6b6b6b;
+  --divider: #d8d8d4;
 }
 
-/* Top Header Section */
+.about-page {
+  min-height: 100vh;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg);
+}
+
+.about-page > header,
+.about-page > .featured-image-container,
+.about-page > main,
+.about-page > section {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.about-page > header:first-child {
+  padding-top: 100px;
+}
+
+/* -- HEADER -- */
 .about-header {
   margin-bottom: 40px;
 }
 
 .about-header h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 42px;
   font-weight: 600;
   margin-bottom: 20px;
+  color: var(--text-primary);
 }
 
 .header-flex {
@@ -26,13 +52,36 @@
 }
 
 .header-description {
-  font-size: 0.9375rem;
-  color: #666;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
   max-width: 600px;
-  line-height: 1.5;
+  line-height: 1.75;
+  font-weight: 300;
 }
 
-/* Featured Image */
+/* -- ARROW LINK (matches Home hero__link) -- */
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.arrow-link:hover {
+  opacity: 0.6;
+}
+
+.arrow-link .link-arrow {
+  font-size: 1rem;
+  display: inline-block;
+}
+
+/* -- FEATURED IMAGE -- */
 .featured-image-container {
   width: 100%;
   margin-bottom: 80px;
@@ -46,7 +95,7 @@
   display: block;
 }
 
-/* My Story Grid */
+/* -- STORY GRID -- */
 .story-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -54,48 +103,62 @@
 }
 
 .story-content h2 {
-  font-size: 32px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 24px;
+  color: var(--text-primary);
 }
 
 .story-text p {
-  color: #555;
-  margin-bottom: 24px;
-  line-height: 1.7;
-  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+  line-height: 1.75;
+  font-size: 0.95rem;
+  font-weight: 300;
 }
 
-/* Education Sidebar */
+/* -- EDUCATION SIDEBAR (mirrors Home experience sidebar) -- */
 .education-section h2 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 32px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 28px;
 }
 
 .edu-item {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .edu-degree {
+  font-size: 0.95rem;
   font-weight: 600;
+  color: var(--text-primary);
   display: block;
   margin-bottom: 4px;
 }
 
 .edu-school {
-  color: #666;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 300;
   display: block;
+  margin-bottom: 4px;
 }
 
 .edu-year {
-  color: #999;
-  font-size: 14px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  font-weight: 300;
 }
 
-/* Experience Section */
+/* -- EXPERIENCE SECTION -- */
 .experience-section {
-  margin-top: 100px;
+  margin-top: 80px;
+  padding-top: 70px;
+  padding-bottom: 80px;
+  border-top: 1px solid var(--divider);
 }
 
 .experience-header {
@@ -106,20 +169,23 @@
 }
 
 .experience-header h2 {
-  font-size: 32px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 2rem;
   font-weight: 600;
+  color: var(--text-primary);
 }
 
 .experience-header p {
   max-width: 400px;
-  color: #666;
+  color: var(--text-secondary);
   text-align: right;
-  line-height: 1.5;
-  font-size: 0.9375rem;
+  line-height: 1.75;
+  font-size: 0.95rem;
+  font-weight: 300;
 }
 
 .experience-card {
-  border: 1px solid #f0f0f0;
+  border: 1px solid var(--divider);
   border-radius: 16px;
   padding: 32px;
   margin-bottom: 24px;
@@ -129,7 +195,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #f5f5f5;
+  border-bottom: 1px solid var(--divider);
   padding-bottom: 20px;
   margin-bottom: 24px;
 }
@@ -138,19 +204,20 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 20px;
+  font-size: 1.05rem;
   font-weight: 600;
+  color: var(--text-primary);
 }
 
 .company-logo {
   width: 40px;
   height: 40px;
-  background: #f8f8f8;
+  background: var(--bg);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #eee;
+  border: 1px solid var(--divider);
 }
 
 .card-content-grid {
@@ -168,27 +235,38 @@
 .detail-group label,
 .description-column label {
   display: block;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 500;
   margin-bottom: 8px;
-  color: #1a1a1a;
+  color: var(--text-primary);
 }
 
 .detail-group p {
-  color: #888;
-  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  font-weight: 300;
 }
 
 .description-column p {
-  color: #666;
-  line-height: 1.6;
-  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  font-size: 0.95rem;
+  font-weight: 300;
 }
 
-/* Responsive: Tablet */
+/* -- RESPONSIVE: TABLET -- */
 @media (max-width: 768px) {
-  .about-page {
-    padding: 100px 20px 48px;
+  .about-page > header,
+  .about-page > .featured-image-container,
+  .about-page > main,
+  .about-page > section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .about-page > header:first-child {
+    padding-top: 100px;
   }
 
   .about-header h1 {
@@ -198,10 +276,6 @@
   .header-flex {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .header-description {
-    font-size: 16px;
   }
 
   .featured-image-container {
@@ -215,10 +289,6 @@
   .story-grid {
     grid-template-columns: 1fr;
     gap: 48px;
-  }
-
-  .story-content h2 {
-    font-size: 26px;
   }
 
   .experience-header {
@@ -237,41 +307,25 @@
   }
 }
 
-/* Responsive: Mobile */
+/* -- RESPONSIVE: MOBILE -- */
 @media (max-width: 480px) {
-  .about-page {
-    padding: 90px 16px 40px;
+  .about-page > header,
+  .about-page > .featured-image-container,
+  .about-page > main,
+  .about-page > section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .about-page > header:first-child {
+    padding-top: 90px;
   }
 
   .about-header h1 {
     font-size: 28px;
   }
 
-  .header-description {
-    font-size: 15px;
-  }
-
   .featured-image {
     border-radius: 12px;
-  }
-
-  .story-content h2 {
-    font-size: 22px;
-  }
-
-  .education-section h2 {
-    font-size: 18px;
-  }
-
-  .experience-header h2 {
-    font-size: 26px;
-  }
-
-  .experience-card {
-    padding: 20px;
-  }
-
-  .company-info {
-    font-size: 16px;
   }
 }
