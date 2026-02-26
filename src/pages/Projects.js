@@ -6,7 +6,7 @@ const Projects = () => {
   const [activeTab, setActiveTab] = useState('All');
 
   // Updated navigation categories as requested
-  const categories = ['All', 'College', 'Personal', 'Insights'];
+  const categories = ['All', 'College', 'Personal'];
 
   return (
     <div className="projects-container">
@@ -25,57 +25,6 @@ const Projects = () => {
           ))}
         </nav>
       </header>
-
-      <main className="project-list">
-        {/* Project Item 1 */}
-        <div className="project-card">
-          <div className="project-image-wrapper">
-            <img src={comingSoon} alt="Design Sprints" />
-          </div>
-          <div className="project-info">
-            <div className="meta-row">
-              <span>Design</span>
-              <span style={{ color: '#d8d8d4' }}>—</span>
-              <span>Jan 21, 2022</span>
-            </div>
-            <h2>What did I learn from doing 50+ design sprints?</h2>
-            <div className="read-time">4 min read</div>
-          </div>
-        </div>
-
-        {/* Project Item 2 */}
-        <div className="project-card">
-          <div className="project-image-wrapper">
-            <img src={comingSoon} alt="Figma vs Sketch" />
-          </div>
-          <div className="project-info">
-            <div className="meta-row">
-              <span>Design</span>
-              <span style={{ color: '#d8d8d4' }}>—</span>
-              <span>Jan 21, 2022</span>
-            </div>
-            <h2>Figma vs Sketch - What design tool to choose in 2022?</h2>
-            <div className="read-time">6 min read</div>
-          </div>
-        </div>
-
-        {/* Project Item 3 */}
-        <div className="project-card">
-          <div className="project-image-wrapper">
-            <img src={comingSoon} alt="Design Systems" />
-          </div>
-          <div className="project-info">
-            <div className="meta-row">
-              <span>College</span>
-              <span style={{ color: '#d8d8d4' }}>—</span>
-              <span>Mar 15, 2022</span>
-            </div>
-            <h2>How to build a scalable design system from scratch</h2>
-            <div className="read-time">8 min read</div>
-          </div>
-        </div>
-
-      </main>
     </div>
   );
 };

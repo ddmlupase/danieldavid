@@ -1,13 +1,47 @@
 import React from 'react';
 import profile from '../assets/danieldavid.png';
+import comingSoon from '../assets/comingsoon.jpg';
+import pokemonfanmadegame from '../assets/pokemonfanmadegame.png';
 import './Home.css';
 
+const featuredProjects = [
+  {
+    name: 'Pokemon Fan-Made Game',
+    type: 'Website Development',
+    image: pokemonfanmadegame,
+    link: 'https://pokemonfanmadegame.netlify.app/',
+  },
+  {
+    name: 'AdDU Univents',
+    type: 'Android Development',
+    image: comingSoon,
+    link: '#',
+  },
+  {
+    name: 'PrintSari Corner System',
+    type: 'Windows Application',
+    image: null,
+    link: '#',
+  },
+  {
+    name: 'Coming Soon',
+    type: 'Full Stack Development',
+    image: null,
+    link: '#',
+  },
+];
 
 const experiences = [
   {
     role: 'Graphic Designer',
-    company: 'Freelance',
+    company: 'Samillano Minimart',
     from: 'October 2025',
+    to: 'December 2025',
+  },
+  {
+    role: 'Social Media Manager',
+    company: 'CJ EasyDrive - Car Rental',
+    from: 'September 2025',
     to: 'December 2025',
   },
   {
@@ -16,7 +50,6 @@ const experiences = [
     from: 'February 2022',
     to: 'December 2022',
   },
-  
 ];
 
 export default function Home() {
@@ -28,7 +61,7 @@ export default function Home() {
         <div className="hero__avatar">
           <img
             src={profile}
-            alt="Daniel David, Product Designer"
+            alt="Daniel David, IT Student"
           />
         </div>
 
@@ -42,7 +75,7 @@ export default function Home() {
             with a passion for technology and innovation.
           </p>
           <a href="mailto:peter@example.com" className="hero__link">
-            Contact me <span className="hero__link-arrow">↗</span>
+            Resume<span className="hero__link-arrow">↗</span>
           </a>
         </div>
       </section>
@@ -89,6 +122,41 @@ export default function Home() {
           </ul>
         </div>
 
+      </section>
+
+      {/* ── FEATURED PROJECTS ── */}
+      <section className="featured">
+        <h2 className="featured__heading">Projects</h2>
+        <p className="featured__description">A collection of projects I've built, 
+          ranging from web development to mobile and desktop applications.</p>
+        
+
+        <ul className="featured__list">
+          {featuredProjects.map((proj, i) => (
+            <li key={i} className="featured__card">
+              <div className="featured__image-wrapper">
+                <img
+                  src={proj.image || comingSoon}
+                  alt={proj.name}
+                  className="featured__image"
+                />
+              </div>
+              <div className="featured__details">
+                <h3 className="featured__name">{proj.name}</h3>
+                <p className="featured__type">{proj.type}</p>
+              </div>
+              <a href={proj.link} className="featured__link">
+                View Project ↗
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <a href="/projects" className="featured__more">
+          All projects <span>↗</span>
+        </a>
+
+        
       </section>
     </div>
   );
