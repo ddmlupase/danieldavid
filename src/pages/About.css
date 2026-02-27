@@ -90,7 +90,6 @@
 .featured-image {
   width: 100%;
   height: auto;
-  border-radius: 24px;
   filter: grayscale(100%);
   display: block;
 }
@@ -186,7 +185,6 @@
 
 .experience-card {
   border: 1px solid var(--divider);
-  border-radius: 16px;
   padding: 32px;
   margin-bottom: 24px;
 }
