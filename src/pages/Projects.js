@@ -1,30 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Projects.css';
-import comingSoon from '../assets/comingsoon.jpg';
+
+const allProjects = [];
+export { allProjects };
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState('All');
-
-  // Updated navigation categories as requested
-  const categories = ['All', 'College', 'Personal'];
+  const navigate = useNavigate();
 
   return (
-    <div className="projects-container">
-      <header className="projects-header">
-        <h1>My Projects</h1>
-        
-        <nav className="category-nav">
-          {categories.map(cat => (
-            <button 
-              key={cat}
-              className={`category-btn ${activeTab === cat ? 'active' : ''}`}
-              onClick={() => setActiveTab(cat)}
-            >
-              {cat}
-            </button>
-          ))}
-        </nav>
-      </header>
+    <div className="projects-page">
+      <div className="container">
+        <button className="back-btn" onClick={() => navigate('/')}>← Back</button>
+        <div className="coming-soon">
+          <h1 className="coming-soon-title">Coming Soon</h1>
+          <p className="coming-soon-desc">This page is under construction.</p>
+        </div>
+      </div>
     </div>
   );
 };

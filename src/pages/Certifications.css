@@ -1,0 +1,32 @@
+.certs-page {
+  padding: 100px 0 120px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.certs-page-header {
+  margin-bottom: 60px;
+}
+
+.certs-page-title {
+  font-family: var(--font-display);
+  font-size: var(--text-hero);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+  color: #0a0a0a;
+}
+
+.all-certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+/* Card styles are inherited from App.css (.cert-card, .cert-image-wrap, etc.) */
+
+@media (max-width: 640px) {
+  .all-certs-grid {
+    grid-template-columns: 1fr;
+  }
+}

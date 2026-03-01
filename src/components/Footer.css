@@ -1,0 +1,22 @@
+/* ── FOOTER ── */
+.footer {
+  padding: 28px 0;
+  border-top: 1px solid #f0f0f0;
+  background: #fff;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copy {
+  font-size: var(--text-sm);
+  color: #bbb;
+}
+
+.footer-built {
+  font-size: var(--text-sm);
+  color: #bbb;
+}

@@ -1,12 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './About.css';
+import './Certifications.css';
 
-const About = () => {
+const Certifications = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="about-page">
+    <div className="certs-page">
       <div className="container">
         <button className="back-btn" onClick={() => navigate('/')}>← Back</button>
         <div className="coming-soon">
@@ -18,4 +18,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Certifications;
