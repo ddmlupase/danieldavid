@@ -35,10 +35,7 @@ import adduunivents from './assets/adduunivents.png';
 
 /* ─── MAIN HOME PAGE ─── */
 const Home = () => {
-  const scrollTo = (id) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
+  
 
   const gridRef = useRef(null);
   const techGridRef = useRef(null);
