@@ -258,23 +258,16 @@ body {
 .tech-grid {
   display: flex;
   gap: 14px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-
-.tech-grid::-webkit-scrollbar {
-  display: none;
+  overflow: hidden;
 }
 
 .tech-card {
   min-width: calc(33.333% - 10px);
   flex-shrink: 0;
-  scroll-snap-align: start;
   border-radius: 18px;
   padding: 24px 22px;
   transition: transform 0.3s cubic-bezier(.25,.46,.45,.94);
+  will-change: transform;
   cursor: grab;
 }
 
@@ -383,20 +376,12 @@ body {
 .projects-grid {
   display: flex;
   gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-
-.projects-grid::-webkit-scrollbar {
-  display: none;
+  overflow: hidden;
 }
 
 .projects-grid .project-card-link {
   min-width: calc(50% - 10px);
   flex-shrink: 0;
-  scroll-snap-align: start;
   text-decoration: none;
   color: inherit;
   display: block;
@@ -505,6 +490,7 @@ body {
   flex-direction: column;
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(.25,.46,.45,.94);
+  will-change: transform;
 }
 
 .cert-card:hover {

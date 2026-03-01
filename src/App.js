@@ -40,6 +40,21 @@ const Home = () => {
   const gridRef = useRef(null);
   const techGridRef = useRef(null);
   const [selectedCert, setSelectedCert] = useState(null);
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      touchMultiplier: 2,
+    });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    return () => lenis.destroy();
+  }, []);
   const scrollGrid = (dir) => {
     if (!gridRef.current) return;
     const card = gridRef.current.querySelector('.project-card');
@@ -52,11 +67,6 @@ const Home = () => {
     const distance = card ? card.offsetWidth + 14 : 400;
     techGridRef.current.scrollBy({ left: dir * distance, behavior: 'smooth' });
   };
-
-   useEffect(() => {
-    const lenis = new Lenis({ autoRaf: true });
-    return () => lenis.destroy();
-  }, []);
 
   return (
     <>
@@ -113,9 +123,9 @@ const Home = () => {
             <span className="section-label">PAST EXPERIENCE</span>
             <div className="exp-list">
               {[
-                { role: 'Full-Stack Developer', company: 'Freelance', from: 'Jan 2023', to: 'Present', current: true },
-                { role: 'Frontend Developer', company: 'Tech Startup', from: '2022', to: '2023', current: false },
-                { role: 'Web Dev Intern', company: 'Digital Agency', from: '2021', to: '2022', current: false },
+                { role: 'Social Media Manager', company: 'Freelance', from: 'Sept 2025', to: 'Dec 2025', current: true },
+                { role: 'Graphic Designer', company: 'CJ Easy Drive Car Rentals', from: 'Nov 2025', to: 'Dec 2025', current: false },
+                { role: 'Data Entry', company: 'Freelance', from: 'Feb 2023', to: ' Dec 2023', current: false },
               ].map((job, i) => (
                 <div className="exp-item" key={i}>
                   <p className="exp-role">
