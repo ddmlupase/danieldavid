@@ -8,7 +8,6 @@ import ProjectDetail from './pages/project_pages/ProjectDetail';
 import About from './pages/About';
 import './App.css';
 import { useEffect, useRef } from 'react';
-import Lenis from 'lenis';
 import pokemonfanmadegame from './assets/Projects/pokemonfanmadegame.png';
 import printsaricorner from './assets/Projects/printsaricorner.png';
 import javascript from './assets/PLicons/javascript.png';
@@ -41,20 +40,7 @@ const Home = () => {
   const techGridRef = useRef(null);
   const [selectedCert, setSelectedCert] = useState(null);
 
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      touchMultiplier: 2,
-    });
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-    return () => lenis.destroy();
-  }, []);
+  /* ── Arrow scroll handlers ── */
   const scrollGrid = (dir) => {
     if (!gridRef.current) return;
     const card = gridRef.current.querySelector('.project-card');
@@ -204,7 +190,7 @@ const Home = () => {
                 <div className="tech-icon-grid">
                   {card.items.map((item) => (
                     <div className="tech-icon-square" key={item.name} data-tooltip={item.name}>
-                      {item.icon && <img src={item.icon} alt={item.name} />}
+                      {item.icon && <img src={item.icon} alt={item.name} loading="lazy" decoding="async" />}
                     </div>
                   ))}
                 </div>
@@ -258,7 +244,14 @@ const Home = () => {
               },
             ].map((proj) => (
               <Link to={`/projects/${proj.slug}`} className="project-card-link" key={proj.slug}>
-                <div className="project-card" style={{ backgroundImage: `url(${proj.img})` }}>
+                <div className="project-card">
+                  <img
+                    src={proj.img}
+                    alt={proj.title}
+                    className="project-card-img"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <div className="project-overlay">
                     <p className="project-tag">{proj.tag}</p>
                     <h3 className="project-title">{proj.title}</h3>
@@ -302,7 +295,7 @@ const Home = () => {
               <div className="cert-card" key={i} onClick={() => setSelectedCert(cert)}>
                 <div className="cert-image-wrap">
                   {cert.img ? (
-                    <img src={cert.img} alt={cert.name} />
+                    <img src={cert.img} alt={cert.name} loading="lazy" decoding="async" />
                   ) : (
                     <div className="cert-image-placeholder"><span>Certificate</span></div>
                   )}
@@ -358,13 +351,13 @@ const Home = () => {
             <a href="mailto:daniel@example.com" className="contact-icon" aria-label="Email">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2-8 5-8-5h16zm0 12H4V9.158l8 5 8-5V18z"/></svg>
             </a>
-            <a href="https://github.com/danieldavid" target="_blank" rel="noreferrer" className="contact-icon" aria-label="GitHub">
+            <a href="https://github.com/ddmlupase" target="_blank" rel="noreferrer" className="contact-icon" aria-label="GitHub">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
             </a>
-            <a href="https://linkedin.com/in/danieldavid" target="_blank" rel="noreferrer" className="contact-icon" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/danieldavidlupase/" target="_blank" rel="noreferrer" className="contact-icon" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.554v-5.57c0-1.327-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.668H9.354V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.284zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.45zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </a>
-            <a href="https://facebook.com/danieldavid" target="_blank" rel="noreferrer" className="contact-icon" aria-label="Facebook">
+            <a href="https://www.facebook.com/danieldavidlupase/" target="_blank" rel="noreferrer" className="contact-icon" aria-label="Facebook">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.885v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
             </a>
           </div>
