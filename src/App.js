@@ -7,9 +7,9 @@ import Certifications from './pages/Certifications';
 import ProjectDetail from './pages/project_pages/ProjectDetail';
 import About from './pages/About';
 import './App.css';
-import { useEffect, useRef } from 'react';
-import pokemonfanmadegame from './assets/Projects/pokemonfanmadegame.png';
-import printsaricorner from './assets/Projects/printsaricorner.png';
+import { useRef } from 'react';
+import projects from './data/projects';
+import certifications from './data/certifications';
 import javascript from './assets/PLicons/javascript.png';
 import flutter from './assets/PLicons/fluttericon.png';
 import mysql from './assets/PLicons/mysqlicon.png';
@@ -26,11 +26,7 @@ import github from './assets/PLicons/github.png';
 import python from './assets/PLicons/python.png';
 import html from './assets/PLicons/html.png';
 import nodejs from './assets/PLicons/nodejs.png';
-import yellowbelt from './assets/Certifications/yellowbelt.png';
-import whitebelt from './assets/Certifications/whitebelt.png';
-import ccna from './assets/Certifications/ccna.png';
 import danieldavid from './assets/danieldavid.png';
-import adduunivents from './assets/adduunivents.png';
 
 /* ─── MAIN HOME PAGE ─── */
 const Home = () => {
@@ -223,26 +219,7 @@ const Home = () => {
           </div>
 
           <div className="projects-grid" ref={gridRef}>
-            {[
-              {
-                slug: 'pokemon-fan-made-game',
-                tag: 'WEB APP',
-                title: 'Pokemon Fan-Made Game',
-                img: pokemonfanmadegame,
-              },
-              {
-                slug: 'printsari-corner-system',
-                tag: 'FRONTEND',
-                title: 'PrintSari Corner System',
-                img: printsaricorner,
-              },
-              {
-                slug: 'AdDU-Univents',
-                tag: 'FRONTEND',
-                title: 'AdDU Univents',
-                img: adduunivents,
-              },
-            ].map((proj) => (
+            {projects.filter(p => p.featured).map((proj) => (
               <Link to={`/projects/${proj.slug}`} className="project-card-link" key={proj.slug}>
                 <div className="project-card">
                   <img
@@ -253,7 +230,7 @@ const Home = () => {
                     decoding="async"
                   />
                   <div className="project-overlay">
-                    <p className="project-tag">{proj.tag}</p>
+                    <p className="project-tag">{proj.type.toUpperCase()}</p>
                     <h3 className="project-title">{proj.title}</h3>
                   </div>
                 </div>
@@ -287,11 +264,7 @@ const Home = () => {
           </div>
 
           <div className="certs-grid">
-            {[
-              { name: 'CCNA: Introduction to Networks', issuer: 'Cisco Networking Academy', date: 'Jan 2026', img: ccna, desc: 'Covers fundamental networking concepts including IP addressing, network protocols, DHCP, router and switch configuration, and network architecture design.' },
-              { name: 'Six Sigma Yellow Belt', issuer: 'Council of Six Sigma Certification', date: 'Jan 2026', img: yellowbelt, desc: 'A comprehensive program covering React, JavaScript, HTML/CSS, version control, UX/UI principles, and front-end development best practices.' },
-              { name: 'Six Sigma White Belt', issuer: 'Council of Six Sigma Certification', date: 'Jan 2026', img: whitebelt, desc: 'Covers the full UX design process: user research, wireframing, prototyping, usability testing, and responsive design thinking.' },
-            ].map((cert, i) => (
+            {certifications.filter(c => c.featured).map((cert, i) => (
               <div className="cert-card" key={i} onClick={() => setSelectedCert(cert)}>
                 <div className="cert-image-wrap">
                   {cert.img ? (

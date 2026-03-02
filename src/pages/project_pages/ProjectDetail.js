@@ -1,12 +1,12 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { allProjects } from '../Projects';
+import projects from '../../data/projects';
 import './ProjectDetail.css';
 
 const ProjectDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const project = allProjects.find((p) => p.slug === slug);
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     return (
@@ -31,7 +31,7 @@ const ProjectDetail = () => {
         {/* Hero banner */}
         <div className="pd-hero" style={{ background: project.bg }}>
           <div className="pd-hero-content">
-            <p className="pd-tag">{project.tag}</p>
+            <p className="pd-tag">{project.type.toUpperCase()}</p>
             <h1 className="pd-title">{project.title}</h1>
           </div>
         </div>
@@ -47,10 +47,9 @@ const ProjectDetail = () => {
             <section className="pd-section">
               <h2 className="pd-section-title">Key Features</h2>
               <ul className="pd-features">
-                <li>Responsive design optimized for all screen sizes</li>
-                <li>Clean, maintainable codebase with modern best practices</li>
-                <li>Performance-first architecture with lazy loading</li>
-                <li>Comprehensive error handling and edge case coverage</li>
+                {project.features.map((f, i) => (
+                  <li key={i}>{f}</li>
+                ))}
               </ul>
             </section>
           </div>
@@ -67,12 +66,33 @@ const ProjectDetail = () => {
               </div>
               <div className="pd-info-row">
                 <span className="pd-info-label">Category</span>
-                <span className="pd-info-value">{project.tag.split('·')[0].trim()}</span>
+                <span className="pd-info-value">{project.category}</span>
               </div>
               <div className="pd-info-row">
                 <span className="pd-info-label">Year</span>
-                <span className="pd-info-value">{project.tag.split('·')[1]?.trim() || '—'}</span>
+                <span className="pd-info-value">{project.year || '—'}</span>
               </div>
+            </div>
+
+            <div className="pd-cta">
+              <a
+                href={project.liveUrl || '#'}
+                target={project.liveUrl ? '_blank' : undefined}
+                rel="noreferrer"
+                className={`pd-btn pd-btn-primary${!project.liveUrl ? ' pd-btn-disabled' : ''}`}
+              >
+                View Project
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+              <a
+                href={project.sourceUrl || '#'}
+                target={project.sourceUrl ? '_blank' : undefined}
+                rel="noreferrer"
+                className={`pd-btn pd-btn-secondary${!project.sourceUrl ? ' pd-btn-disabled' : ''}`}
+              >
+                Source Code
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
             </div>
           </aside>
         </div>
