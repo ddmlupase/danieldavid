@@ -58,6 +58,7 @@
 }
 
 .pd-desc {
+  font-family: var(--font-body);
   font-size: var(--text-body);
   line-height: 1.75;
   color: #666;
@@ -69,6 +70,7 @@
 }
 
 .pd-features li {
+  font-family: var(--font-body);
   font-size: var(--text-body);
   line-height: 1.75;
   color: #666;

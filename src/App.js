@@ -103,18 +103,18 @@ const Home = () => {
               What about<br />me.
             </h2>
             <p>
-              I'm a full-stack developer with a passion for crafting clean, scalable
-              web applications. My work sits at the intersection of thoughtful design
-              and solid engineering — I believe great software is invisible to the user.
+              I am an Information Technology student with a strong passion for computers, networks, 
+              and mobile technology. My interests are centered around networking, database management, 
+              and mobile application development — areas I actively pursue both in my studies and through 
+              personal projects.
             </p>
             <p>
-              Before focusing on full-stack development, I explored multiple layers of the
-              stack, developing a deep appreciation for performance and developer experience.
-              This thinking influences everything I build.
+              I enjoy the technical challenge that each of these fields brings, whether it's designing 
+              structured databases, understanding how networks operate, or building mobile applications.
             </p>
             <p>
-              When I'm not coding, you'll find me exploring new frameworks, obsessing over
-              clean architecture, or building passion projects from scratch.
+              My goal is to become a skilled IT professional specializing in networking or database administration, 
+              while continuing to grow as a developer through continuous learning and hands-on experience.
             </p>
             <Link to="/about" className="text-link" style={{ marginTop: '8px' }}>More about me ↗</Link>
           </div>
@@ -123,8 +123,8 @@ const Home = () => {
             <span className="section-label">PAST EXPERIENCE</span>
             <div className="exp-list">
               {[
-                { role: 'Social Media Manager', company: 'Freelance', from: 'Sept 2025', to: 'Dec 2025', current: true },
-                { role: 'Graphic Designer', company: 'CJ Easy Drive Car Rentals', from: 'Nov 2025', to: 'Dec 2025', current: false },
+                { role: 'Social Media Manager', company: 'Freelance', from: 'Sept 2025', to: 'Dec 2025', current: false },
+                { role: 'Graphic Designer', company: 'Freelance', from: 'Nov 2025', to: 'Dec 2025', current: false },
                 { role: 'Data Entry', company: 'Freelance', from: 'Feb 2023', to: ' Dec 2023', current: false },
               ].map((job, i) => (
                 <div className="exp-item" key={i}>

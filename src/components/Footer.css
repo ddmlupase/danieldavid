@@ -12,11 +12,13 @@
 }
 
 .footer-copy {
+  font-family: var(--font-body);
   font-size: var(--text-sm);
   color: #bbb;
 }
 
 .footer-built {
+  font-family: var(--font-body);
   font-size: var(--text-sm);
   color: #bbb;
 }
