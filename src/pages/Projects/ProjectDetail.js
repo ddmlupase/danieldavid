@@ -8,6 +8,13 @@ const ProjectDetail = () => {
   const navigate = useNavigate();
   const project = projects.find((p) => p.slug === slug);
 
+  const workLabel =
+    project?.workType === 'solo'
+      ? 'Solo project'
+      : project?.workType === 'group'
+        ? 'Group project'
+        : null;
+
   if (!project) {
     return (
       <div className="project-detail-page">
@@ -68,6 +75,12 @@ const ProjectDetail = () => {
                 <span className="pd-info-label">Category</span>
                 <span className="pd-info-value">{project.category}</span>
               </div>
+              {workLabel && (
+                <div className="pd-info-row">
+                  <span className="pd-info-label">Work</span>
+                  <span className="pd-info-value">{workLabel}</span>
+                </div>
+              )}
               <div className="pd-info-row">
                 <span className="pd-info-label">Year</span>
                 <span className="pd-info-value">{project.year || '—'}</span>
@@ -102,3 +115,4 @@ const ProjectDetail = () => {
 };
 
 export default ProjectDetail;
+

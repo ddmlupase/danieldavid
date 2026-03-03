@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import certifications from '../data/certifications';
+import certifications from '../../data/certifications';
 import './Certifications.css';
 
 const Certifications = () => {
@@ -14,7 +14,7 @@ const Certifications = () => {
 
         <div className="certs-page-header">
           <h1 className="certs-page-title">
-            Certifications<span className="heading-muted">.</span>
+            Certifications
           </h1>
         </div>
 
@@ -66,3 +66,4 @@ const Certifications = () => {
 };
 
 export default Certifications;
+
