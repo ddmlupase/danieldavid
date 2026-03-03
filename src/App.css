@@ -136,6 +136,11 @@ body {
   border-radius: 50%;
   object-fit: cover;
   filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.hero-avatar img:hover {
+  filter: grayscale(0%);
 }
 
 .hero-right {
