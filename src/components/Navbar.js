@@ -4,6 +4,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -22,7 +23,23 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Close menu on route change
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+
   const handleNav = (id) => {
+    setMenuOpen(false);
     if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
@@ -36,16 +53,24 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
+    <nav className={`navbar${scrolled ? ' scrolled' : ''}${menuOpen ? ' menu-open' : ''}`}>
       <div className="nav-inner">
         <span className="nav-logo" onClick={() => handleNav('hero')}>danieldavid</span>
-        <div className="nav-links">
+        <button
+          className={`burger${menuOpen ? ' open' : ''}`}
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label="Toggle menu"
+        >
+          <span /><span /><span />
+        </button>
+        <div className={`nav-links${menuOpen ? ' open' : ''}`}>
           <button onClick={() => handleNav('about')}>About</button>
           <button onClick={() => handleNav('projects')}>Projects</button>
           <button onClick={() => handleNav('certifications')}>Certifications</button>
           <button onClick={() => handleNav('contact')}>Contact</button>
         </div>
       </div>
+      {menuOpen && <div className="nav-overlay" onClick={() => setMenuOpen(false)} />}
     </nav>
   );
 };
