@@ -264,7 +264,7 @@ const Home = () => {
           </div>
 
           <div className="certs-grid">
-            {certifications.filter(c => c.featured).map((cert, i) => (
+            {certifications.filter(c => c.featured).slice(0, 3).map((cert, i) => (
               <div className="cert-card" key={i} onClick={() => setSelectedCert(cert)}>
                 <div className="cert-image-wrap">
                   {cert.img ? (

@@ -16,6 +16,7 @@
 import ccna from '../assets/Certifications/ccna.png';
 import yellowbelt from '../assets/Certifications/yellowbelt.png';
 import whitebelt from '../assets/Certifications/whitebelt.png';
+import ndbc from '../assets/Certifications/ndbc.png';
 
 const certifications = [
   {
@@ -24,6 +25,14 @@ const certifications = [
     date: 'Jan 2026',
     img: ccna,
     desc: 'Covers fundamental networking concepts including IP addressing, network protocols, DHCP, router and switch configuration, and network architecture design.',
+    featured: true,
+  },
+  {
+    name: 'Networking Devices and Basic Configurations',
+    issuer: 'Cisco Networking Academy',
+    date: 'Mar 2026',
+    img: ndbc,
+    desc: 'Focuses on configuring routers and switches, basic network security, VLANs, and troubleshooting common network issues using Cisco devices.',
     featured: true,
   },
   {
