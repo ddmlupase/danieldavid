@@ -320,7 +320,7 @@ const Home = () => {
             Drop me a message and I'll get back to you within 24 hours.
           </p>
           <div className="contact-links">
-            <a href="mailto:daniel@example.com" className="contact-icon" aria-label="Email">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSceeFWRsHtLXbP9OhkWKw7fQh692vgS0d3tkr0e0W6kPEU64A/viewform?usp=sharing&ouid=104694621859418463262" target="_blank" rel="noreferrer" className="contact-icon" aria-label="Email">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2-8 5-8-5h16zm0 12H4V9.158l8 5 8-5V18z"/></svg>
             </a>
             <a href="https://github.com/ddmlupase" target="_blank" rel="noreferrer" className="contact-icon" aria-label="GitHub">
