@@ -17,6 +17,7 @@ import ccna from '../assets/Certifications/ccna.png';
 import yellowbelt from '../assets/Certifications/yellowbelt.png';
 import whitebelt from '../assets/Certifications/whitebelt.png';
 import ndbc from '../assets/Certifications/ndbc.png';
+import ndbt from '../assets/Certifications/ndbt.png';
 
 const certifications = [
   {
@@ -32,6 +33,14 @@ const certifications = [
     issuer: 'Cisco Networking Academy',
     date: 'Mar 2026',
     img: ndbc,
+    desc: 'Focuses on configuring routers and switches, basic network security, VLANs, and troubleshooting common network issues using Cisco devices.',
+    featured: true,
+  },
+  {
+    name: 'Network Addressing and Basic Troubleshooting',
+    issuer: 'Cisco Networking Academy',
+    date: 'April 2026',
+    img: ndbt,
     desc: 'Focuses on configuring routers and switches, basic network security, VLANs, and troubleshooting common network issues using Cisco devices.',
     featured: true,
   },

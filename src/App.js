@@ -63,11 +63,10 @@ const Home = () => {
           <div className="hero-right">
             <h1 className="hero-title">
               Hello, I'm Daniel David.<br />
-              <span className="hero-title-muted">IT Student.</span>
+              <span className="hero-title-muted">Full-Stack Dev & IT Specialist</span>
             </h1>
             <p className="hero-desc">
-              I build clean, performant web applications that live at the
-              intersection of design and engineering. Based in the Philippines.
+            I build clean and practical solutions that combine design and technology. Based in the Philippines.
             </p>
             <div className="hero-cta">
               <a href="/resume.pdf" className="text-link">Download resume ↗</a>
@@ -87,7 +86,7 @@ const Home = () => {
             <p>
               I am an Information Technology student with a strong passion for computers, networks, 
               and mobile technology. My interests are centered around networking, database management, 
-              and mobile application development — areas I actively pursue both in my studies and through 
+              mobile application development, and web development — areas I actively pursue both in my studies and through 
               personal projects.
             </p>
             <p>
