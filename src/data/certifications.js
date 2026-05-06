@@ -26,6 +26,7 @@ const certifications = [
     date: 'Jan 2026',
     img: ccna,
     desc: 'Covers fundamental networking concepts including IP addressing, network protocols, DHCP, router and switch configuration, and network architecture design.',
+    skills: ['IP Addressing', 'Network Protocols', 'DHCP', 'Router Config', 'Switch Config', 'Subnetting', 'Network Architecture', 'OSI Model'],
     featured: true,
   },
   {
@@ -34,6 +35,7 @@ const certifications = [
     date: 'Mar 2026',
     img: ndbc,
     desc: 'Focuses on configuring routers and switches, basic network security, VLANs, and troubleshooting common network issues using Cisco devices.',
+    skills: ['Router Config', 'Switch Config', 'VLANs', 'Network Security', 'Cisco IOS', 'Troubleshooting', 'Inter-VLAN Routing'],
     featured: true,
   },
   {
@@ -41,7 +43,8 @@ const certifications = [
     issuer: 'Cisco Networking Academy',
     date: 'April 2026',
     img: ndbt,
-    desc: 'Focuses on configuring routers and switches, basic network security, VLANs, and troubleshooting common network issues using Cisco devices.',
+    desc: 'Focuses on network addressing schemes and systematic troubleshooting of common network issues using diagnostic tools and methodologies.',
+    skills: ['IPv4 / IPv6', 'Subnetting', 'Packet Tracer', 'Ping & Traceroute', 'Network Diagnostics', 'Address Planning'],
     featured: true,
   },
   {
@@ -49,7 +52,8 @@ const certifications = [
     issuer: 'Council of Six Sigma Certification',
     date: 'Jan 2026',
     img: yellowbelt,
-    desc: 'A comprehensive program covering React, JavaScript, HTML/CSS, version control, UX/UI principles, and front-end development best practices.',
+    desc: 'Introduces the DMAIC framework and core quality improvement tools used to identify, analyze, and reduce process defects.',
+    skills: ['DMAIC', 'Root Cause Analysis', 'Data Collection', 'Process Mapping', 'Quality Tools', 'Fishbone Diagram'],
     featured: true,
   },
   {
@@ -57,7 +61,8 @@ const certifications = [
     issuer: 'Council of Six Sigma Certification',
     date: 'Jan 2026',
     img: whitebelt,
-    desc: 'Covers the full UX design process: user research, wireframing, prototyping, usability testing, and responsive design thinking.',
+    desc: 'Covers the foundational principles of Lean and Six Sigma, including waste reduction, process thinking, and team collaboration.',
+    skills: ['Lean Principles', 'Waste Reduction', 'Process Thinking', 'Team Collaboration', 'Quality Awareness'],
     featured: true,
   },
 ];

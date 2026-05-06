@@ -45,6 +45,7 @@ const projects = [
     featured: true,
     liveUrl: '',
     sourceUrl: 'https://github.com/ddmlupase/myCopilotApp',
+    screenshots: [mycopilotflutterapp, mycopilotflutterapp, mycopilotflutterapp],
   },
   {
     slug: 'printsari-corner-system',
@@ -66,6 +67,7 @@ const projects = [
     featured: true,
     liveUrl: '',
     sourceUrl: '',
+    screenshots: [printsaricorner, printsaricorner, printsaricorner],
   },
   {
     slug: 'pokemon-fan-made-game',
@@ -87,6 +89,7 @@ const projects = [
     featured: true,
     liveUrl: 'https://pokemonfanmadegame.netlify.app/',
     sourceUrl: 'https://github.com/ddmlupase/pokemon-fan-made-game',
+    screenshots: [pokemonfanmadegame, pokemonfanmadegame, pokemonfanmadegame],
   },
 ];
 

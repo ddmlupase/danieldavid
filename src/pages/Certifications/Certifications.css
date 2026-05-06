@@ -25,9 +25,197 @@
 
 /* Card styles are inherited from App.css (.cert-card, .cert-image-wrap, etc.) */
 
+/* ── Modal ── */
+@keyframes cert-overlay-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes cert-modal-in {
+  from { opacity: 0; transform: translateY(24px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}
+
+.cert-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: cert-overlay-in 0.2s ease;
+}
+
+.cert-modal {
+  position: relative;
+  background: #fff;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.25);
+  animation: cert-modal-in 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Certificate image — full & contained ── */
+.cert-modal-img-wrap {
+  width: 100%;
+  background: #f5f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 36px;
+  border-radius: 24px 24px 0 0;
+  flex-shrink: 0;
+}
+
+.cert-modal-img-wrap img {
+  width: 100%;
+  height: auto;
+  max-height: 260px;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+}
+
+.cert-modal-img-placeholder {
+  color: #bbb;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── Details body ── */
+.cert-modal-body {
+  padding: 28px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cert-modal-issuer {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin: 0;
+}
+
+.cert-modal-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: #0a0a0a;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+  margin: 4px 0 2px;
+}
+
+.cert-modal-date {
+  font-size: 13px;
+  font-weight: 500;
+  color: #aaa;
+  margin: 0 0 12px;
+}
+
+.cert-modal-desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666;
+  margin: 0 0 20px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* ── Skills pills ── */
+.cert-modal-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cert-modal-skills-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #bbb;
+  margin: 0;
+}
+
+.cert-modal-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cert-skill-pill {
+  background: #f5f5f7;
+  color: #444;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  white-space: nowrap;
+}
+
+/* ── Close button ── */
+.cert-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.08);
+  border: none;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+  z-index: 10;
+}
+
+.cert-modal-close:hover {
+  background: rgba(0, 0, 0, 0.14);
+  color: #0a0a0a;
+}
+
+/* ── Responsive ── */
 @media (max-width: 640px) {
   .all-certs-grid {
     grid-template-columns: 1fr;
+  }
+
+  .cert-modal {
+    border-radius: 18px;
+    max-height: 92vh;
+  }
+
+  .cert-modal-img-wrap {
+    padding: 24px;
+    border-radius: 18px 18px 0 0;
+  }
+
+  .cert-modal-body {
+    padding: 22px 22px 28px;
+  }
+
+  .cert-modal-title {
+    font-size: 17px;
   }
 }
 
